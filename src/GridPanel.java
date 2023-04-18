@@ -4,8 +4,6 @@ import java.util.Random;
 import java.awt.event.*;
 
 public class GridPanel extends JPanel {
-    private static final long serialVersionUID = 1L;
-
     private int gridSize = 10;
     private int cellSize = 50;
     private Color[][] gridColors;
@@ -21,7 +19,7 @@ public class GridPanel extends JPanel {
     public GridPanel() {
         setPreferredSize(new Dimension(gridSize * cellSize, gridSize * cellSize));
         setBackground(Color.WHITE);
-
+        
         gridColors = new Color[gridSize][gridSize];
         Random rand = new Random();
         for (int i = 0; i < gridSize; i++) {
@@ -29,7 +27,8 @@ public class GridPanel extends JPanel {
                 gridColors[i][j] = rand.nextBoolean() ? Color.BLACK : Color.WHITE;
             }
         }
-
+    
+        
         addMouseListener(new MouseAdapter() {
             public void mouseClicked(MouseEvent e) {
                 int row = e.getY() / cellSize;
@@ -46,13 +45,13 @@ public class GridPanel extends JPanel {
                 }
             }
         });
-
+        
         editButton = new JButton("Enlever/Ajouter Murs");
         editButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 editMode = !editMode;
                 if (editMode) {
-                    editButton.setText("Mode Dessin");
+                    editButton.setText("Mode Auditeur");
                     placeJoueurButton.setEnabled(false);
                     placeTButton.setEnabled(false);
                 } else {
@@ -63,41 +62,42 @@ public class GridPanel extends JPanel {
             }
         });
         add(editButton);
-
-        placeJoueurButton = new JButton("Placer Joueur");
+        
+        placeJoueurButton = new JButton("Placer Thésée");
         placeJoueurButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 placeJoueurMode = !placeJoueurMode;
                 if (placeJoueurMode) {
-                    placeJoueurButton.setText("Mode Dessin");
+                    placeJoueurButton.setText("Mode Auditeur");
                     editButton.setEnabled(false);
                     placeTButton.setEnabled(false);
                 } else {
-                    placeJoueurButton.setText("Placer Joueur");
+                    placeJoueurButton.setText("Placer Thésée");
                     editButton.setEnabled(true);
                     placeTButton.setEnabled(true);
                 }
             }
         });
         add(placeJoueurButton);
-
-        placeTButton = new JButton("Placer Lettre T");
+        
+        placeTButton = new JButton("Placer Sortie");
         placeTButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 placeTMode = !placeTMode;
                 if (placeTMode) {
-                    placeTButton.setText("Mode Dessin");
+                    placeTButton.setText("Mode Auditeur");
                     editButton.setEnabled(false);
                     placeJoueurButton.setEnabled(false);
                 } else {
-                    placeTButton.setText("Placer Lettre T");
+                    placeTButton.setText("Placer Sortie");
                     editButton.setEnabled(true);
                     placeJoueurButton.setEnabled(true);
                 }
             }
         });
-        add(placeTButton);
+        add(placeTButton);        
     }
+    
 
 public void paintComponent(Graphics g) {
     super.paintComponent(g);
@@ -144,13 +144,5 @@ public static void main(String[] args) {
     frame.getContentPane().add(gridPanel.getComponents()[0], BorderLayout.NORTH);
     frame.pack();
     frame.setVisible(true);
-
-    Timer timer = new Timer(100, new ActionListener() {
-        @Override
-        public void actionPerformed(ActionEvent e) {
-            gridPanel.repaint();
-        }
-    });
-    timer.start();
 }
 }
