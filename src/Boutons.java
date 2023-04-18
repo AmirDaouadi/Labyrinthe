@@ -42,7 +42,8 @@ public class Boutons extends JPanel {
                             case 0:
                                 // afficher la grille aléatoirement
                                 GridPanel grille = new GridPanel();
-                                addGrid(grille);
+                                this.fenetrePrincipale.add(grille);
+                                this.fenetrePrincipale.validate();
                                 break;
                             case 1:
                                 // TODO: partir d'une grille vide
