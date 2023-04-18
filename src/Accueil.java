@@ -17,10 +17,10 @@ public class Accueil extends JPanel {
         fenetre.setContentPane(accueil);
 
         // Création du texte
-        JLabel texte = new JLabel("Choisissez votre type de grille", SwingConstants.CENTER);
-        texte.setPreferredSize(new Dimension(800, 50));
+        JLabel texte = new JLabel("Bon jeu !", SwingConstants.CENTER);
+        texte.setPreferredSize(new Dimension(500, 50));
         texte.setFont(new Font("Arial", Font.BOLD, 30));
-        texte.setForeground(new Color(0, 200, 10));
+        texte.setForeground(new Color(0, 0, 0));
 
         // Création des boutons
         Boutons boutons = new Boutons(fenetre);

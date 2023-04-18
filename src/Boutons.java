@@ -13,12 +13,12 @@ public class Boutons extends JPanel {
         choisirGrille = new JButton("Générer une grille");
         choisirGrille.setPreferredSize(new Dimension(250, 50));
         choisirGrille.setFont(new Font("Arial", Font.BOLD, 20));
-        choisirGrille.setBackground(Color.CYAN);
+        choisirGrille.setBackground(Color.GRAY);
     
         importerGrille = new JButton("Importer une grille");
         importerGrille.setPreferredSize(new Dimension(250, 50));
         importerGrille.setFont(new Font("Arial", Font.BOLD, 20));
-        importerGrille.setBackground(Color.GREEN);
+        importerGrille.setBackground(Color.GRAY);
 
         this.fenetrePrincipale = fenetrePrincipale;
     
@@ -71,7 +71,7 @@ public class Boutons extends JPanel {
 
         importerGrille.addActionListener(e -> {
             JFileChooser fileChooser = new JFileChooser();
-            fileChooser.setDialogTitle("Choisissez un fichier de grille");
+            fileChooser.setDialogTitle("Selectionnez le fichier ou se trouve votre grille");
             int choix = fileChooser.showOpenDialog(this);
             if (choix == JFileChooser.APPROVE_OPTION) {
                 File fichier = fileChooser.getSelectedFile();
