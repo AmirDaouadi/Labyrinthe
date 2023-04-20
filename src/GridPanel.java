@@ -52,7 +52,7 @@ public class GridPanel extends JPanel {
             public void actionPerformed(ActionEvent e) {
                 editMode = !editMode;
                 if (editMode) {
-                    editButton.setText("Mode Auditeur");
+                    editButton.setText("Mode Editeur");
                     placeJoueurButton.setEnabled(false);
                     placeTButton.setEnabled(false);
                 } else {
@@ -64,12 +64,12 @@ public class GridPanel extends JPanel {
         });
         add(editButton);
         
-        placeJoueurButton = new JButton("Placer Thésée");
+        placeJoueurButton = new JButton("Placer Thésee");
         placeJoueurButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 placeJoueurMode = !placeJoueurMode;
                 if (placeJoueurMode) {
-                    placeJoueurButton.setText("Mode Auditeur");
+                    placeJoueurButton.setText("Mode Editeur");
                     editButton.setEnabled(false);
                     placeTButton.setEnabled(false);
                 } else {
@@ -86,7 +86,7 @@ public class GridPanel extends JPanel {
             public void actionPerformed(ActionEvent e) {
                 placeTMode = !placeTMode;
                 if (placeTMode) {
-                    placeTButton.setText("Mode Auditeur");
+                    placeTButton.setText("Mode Editeur");
                     editButton.setEnabled(false);
                     placeJoueurButton.setEnabled(false);
                 } else {
@@ -96,7 +96,7 @@ public class GridPanel extends JPanel {
                 }
             }
         });
-        add(placeTButton);        
+        add(placeTButton);
     }
     
 
