@@ -7,7 +7,8 @@ public class Boutons extends JPanel {
     private JButton choisirGrille;
     private JButton importerGrille;
     private JFrame fenetrePrincipale;
-    
+    /*private int tailleGrille; // variable pour stocker la taille de la grille choisie par l'utilisateur */
+
     public Boutons(JFrame fenetrePrincipale) {
         // Création des boutons
         choisirGrille = new JButton("Générer une grille");
@@ -32,16 +33,18 @@ public class Boutons extends JPanel {
                 }
                 try {
                     int taille = Integer.parseInt(strTaille);
-                    if (taille > 3 && taille < 21) {
-                        // afficher la taille choisir dans la console
-                        System.out.println("Les dimensions de la grille : " + taille + "x" + taille);
-                        // Afficher la boîte de dialogue pour le choix du remplissage de la grille
-                        String[] options = {"Remplir aléatoirement", "Partir d'une grille vide"};
-                        int choix = JOptionPane.showOptionDialog(this, "Choisissez comment remplir la grille :", "Remplissage de la grille", JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, options, options[0]);
-                        switch (choix) {
+                if (taille > 3 && taille < 21) {
+                    // stocker la taille de la grille choisie
+                    /*this.tailleGrille = taille;*/
+                    // afficher la taille choisir dans la console
+                    System.out.println("Les dimensions de la grille : " + taille + "x" + taille);
+                    // Afficher la boîte de dialogue pour le choix du remplissage de la grille
+                    String[] options = {"Remplir aléatoirement", "Partir d'une grille vide"};
+                    int choix = JOptionPane.showOptionDialog(this, "Choisissez comment remplir la grille :", "Remplissage de la grille", JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, options, options[0]);
+                    switch (choix) {
                             case 0:
                                 // afficher la grille aléatoirement
-                                GridPanel grille = new GridPanel();
+                                GridPanel grille = new GridPanel(taille);
                                 this.fenetrePrincipale.add(grille);
                                 this.fenetrePrincipale.validate();
                                 break;

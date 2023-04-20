@@ -4,7 +4,7 @@ import java.util.Random;
 import java.awt.event.*;
 
 public class GridPanel extends JPanel {
-    private int gridSize = 10;
+    private int gridSize;
     private int cellSize = 50;
     private Color[][] gridColors;
     private boolean editMode = false;
@@ -16,7 +16,8 @@ public class GridPanel extends JPanel {
     private JButton placeTButton;
     private JButton editButton;
 
-    public GridPanel() {
+    public GridPanel(int gs) {
+        this.gridSize = gs;
         setPreferredSize(new Dimension(gridSize * cellSize, gridSize * cellSize));
         setBackground(Color.WHITE);
         
@@ -135,7 +136,7 @@ public void paintComponent(Graphics g) {
 }
 
     
-public static void main(String[] args) {
+/*public static void main(String[] args) {
     JFrame frame = new JFrame("GridPanel");
     frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     frame.getContentPane().setLayout(new BorderLayout());
@@ -144,5 +145,5 @@ public static void main(String[] args) {
     frame.getContentPane().add(gridPanel.getComponents()[0], BorderLayout.NORTH);
     frame.pack();
     frame.setVisible(true);
-}
+}*/
 }
