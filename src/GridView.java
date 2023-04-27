@@ -3,6 +3,7 @@ import java.awt.*;
 import java.awt.event.MouseEvent;
 
 public class GridView extends JPanel {
+    private Window window;
     private Grid model;
     private int gridSize;
     private int gridStartX;
@@ -15,8 +16,9 @@ public class GridView extends JPanel {
     /**
      * Manages the display of the grid
      */
-    public GridView() {
+    public GridView(Window window) {
         super();
+        this.window = window;
     }
 
     public void setGrid(Grid model) {
@@ -46,8 +48,8 @@ public class GridView extends JPanel {
             for (int i = 0; i < this.model.getSize(); i++) {
                 for (int j = 0; j < this.model.getSize(); j++) {
                     try {
-                        if (this.model.getSquare(i, j).isWall()) g.setColor(Color.BLACK);
-                        else g.setColor(Color.WHITE);
+                        if (this.model.getSquare(i, j).isWall()) g.setColor(new Color(122, 68, 25));
+                        else g.setColor(new Color(77, 170, 87));
                         g.fillRect(this.gridStartX + (this.squareSize * j), this.gridStartY + (this.squareSize * i), this.squareSize, this.squareSize);
 
                         g.setColor(Color.BLACK);
@@ -69,7 +71,7 @@ public class GridView extends JPanel {
             }
 
             // Draw horizontal lines
-            g.setColor(Color.BLACK);
+            g.setColor(new Color(73, 88, 103));
             for (int i = 0; i < this.model.getSize()+1; i++) {
                 g.drawLine(this.gridStartX, this.gridStartY + (this.squareSize * i), this.gridStartX + (this.squareSize * this.model.getSize()), this.gridStartY + (this.squareSize * i));
             }

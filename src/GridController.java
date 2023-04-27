@@ -24,7 +24,7 @@ public class GridController {
         TheseeController theseeController = new TheseeController(this.model.getThesee(), this.view);
 
         this.view.setPreferredSize(new Dimension(700, 500));
-        this.view.setBackground(Color.WHITE);
+        this.view.setBackground(new Color(193, 190, 180));
 
         this.view.addMouseListener(new MouseAdapter() {
             public void mouseClicked(MouseEvent e) {
@@ -122,9 +122,5 @@ public class GridController {
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
-    }
-
-    public GridView getView() {
-        return this.view;
     }
 }
