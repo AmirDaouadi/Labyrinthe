@@ -1,43 +1,41 @@
-import java.util.Arrays;
+public class Grid {
+    private Square[][] squares;
+    private int squareSize;
+    private Thesee thesee = new Thesee();
 
-public class Grid {   
-    private Square[][] grid;
-
-    public Grid(int taille) {
-        this.grid = new Square[taille][taille];
-        for (int i = 0; i < taille; i++) {
-            for (int j = 0; j < taille; j++) {
-                this.grid[i][j] = new Square(i, j);
+    public Grid(int size) {
+        this.squares = new Square[size][size];
+        for (int i = 0; i < size; i++) {
+            for (int j = 0; j < size; j++) {
+                this.squares[i][j] = new Square(this, i, j);
             }
         }
     }
 
-    public void setWall(int x, int y) throws ArrayIndexOutOfBoundsException {
-        this.grid[x][y].setWall();
+    /**
+     * Get the grid's size (number of squares on a row/column)
+     * @return The grid's size
+     */
+    public int getSize() {
+        return this.squares.length;
     }
 
-    public void setExit(int x, int y) throws ArrayIndexOutOfBoundsException {
-        for (Square[] line : this.grid) {
-            for (Square square : line) {
-                if (square.isExit()) square.setEmpty();
-            }
+    /**
+     * Get a square from the grid
+     * @param row The row of the square
+     * @param column The column of the square
+     * @return The square at the given position
+     * @throws Exception If the position is out of grid's bounds
+     */
+    public Square getSquare(int row, int column) throws Exception {
+        try {
+            return this.squares[row][column];
+        } catch (ArrayIndexOutOfBoundsException e) {
+            throw new Exception("No square found at position (" + row + ", " + column + ")");
         }
-        this.grid[x][y].setExit();
     }
 
-    public int getRows() {
-        return this.grid.length;
-    }
-
-    public int getColumns() {
-        return this.grid[0].length;
-    }
-
-    public boolean isWall(int x, int y) {
-        return this.grid[x][y].isWall();
-    }
-
-    public boolean isExit(int x, int y) {
-        return this.grid[x][y].isEmpty();
+    public Thesee getThesee() {
+        return this.thesee;
     }
 }
