@@ -34,6 +34,10 @@ public class Square {
         return this.type == 0;
     }
 
+    public boolean isThesee() {
+        return this.gridModel.getThesee().getSquare() == this;
+    }
+
     /**
      * Sets the current square as a wall
      */
