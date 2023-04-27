@@ -2,7 +2,6 @@
   <configuration default="false" name="Labyrinthe" type="Application" factoryName="Application">
     <option name="MAIN_CLASS_NAME" value="Main" />
     <module name="SAE21_2022" />
-    <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
     <method v="2">
       <option name="Make" enabled="true" />
     </method>
