@@ -17,6 +17,7 @@ public class HomeView extends JPanel {
         // Création du panel pour le texte
         JPanel panelTexte = new JPanel(new FlowLayout(FlowLayout.CENTER, 0, 0));
         panelTexte.add(texte);
+        panelTexte.setOpaque(false);
 
         // Création du panel pour les boutons
         JPanel panelBoutons = new JPanel(new FlowLayout(FlowLayout.CENTER, 100, 200));
@@ -43,7 +44,7 @@ public class HomeView extends JPanel {
         JButton choisirGrille = new JButton("Générer une grille");
         choisirGrille.setPreferredSize(new Dimension(250, 50));
         choisirGrille.setFont(new Font("Arial", Font.BOLD, 20));
-        choisirGrille.setBackground(Color.GRAY);
+        choisirGrille.setBackground(new Color(96, 175, 255));
 
         choisirGrille.addActionListener(e -> {
             String strTaille = JOptionPane.showInputDialog(panel, "Entrez la taille de la grille :", "Taille de la grille", JOptionPane.PLAIN_MESSAGE);
@@ -99,7 +100,7 @@ public class HomeView extends JPanel {
         JButton importerGrille = new JButton("Importer une grille");
         importerGrille.setPreferredSize(new Dimension(250, 50));
         importerGrille.setFont(new Font("Arial", Font.BOLD, 20));
-        importerGrille.setBackground(Color.GRAY);
+        importerGrille.setBackground(new Color(96, 175, 255));
 
         importerGrille.addActionListener(e -> {
             JFileChooser fileChooser = new JFileChooser();

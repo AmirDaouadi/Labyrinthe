@@ -10,8 +10,6 @@ public class Window extends JFrame {
         this.setSize(d);
         this.setLocationRelativeTo(null);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        System.out.println("Fenêtre :");
-        System.out.println("\tLargeur de la fenêtre : " + this.getWidth() + "px");
-        System.out.println("\tHauteur de la fenêtre : " + this.getHeight() + "px");
+        this.setMinimumSize(new Dimension(750, 750));
     }
 }
