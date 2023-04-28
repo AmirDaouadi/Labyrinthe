@@ -1,7 +1,7 @@
 import java.io.*;
 /**
  * Class to manage file import/export
- * @version 1.1
+ * @version 1.0
  * @author Amir Daouadi
  * @author Lyanis Souidi
  */
@@ -18,7 +18,7 @@ public class FileManager {
             FileInputStream fs = new FileInputStream(file);
             DataInputStream ds = new DataInputStream(fs);
             try {
-                grid = new Grid(ds.read());
+                grid = new Grid(ds.read(), file);
                 grid.getThesee().setSquare(grid.getSquare(ds.read(), ds.read()));
                 grid.getSquare(ds.read(), ds.read()).setExit();
 
@@ -47,10 +47,11 @@ public class FileManager {
     /**
      * Export a grid to a file
      * @param grid The grid to export
-     * @param file The file to export to
      * @throws Exception If an error occurs during the export
      */
-    public static void exportGrid(Grid grid, File file) throws Exception {
+    public static void exportGrid(Grid grid) throws Exception {
+        if (!grid.validate()) throw new Exception("La grille n'est pas valide. Assurez-vous que la grille contient Thésée et la sortie ainsi que la sortie puisse être accessible depuis la position de Thésée.");
+        File file = grid.getFile();
         try {
             FileOutputStream fs = new FileOutputStream(file);
             DataOutputStream ds = new DataOutputStream(fs);
@@ -64,16 +65,9 @@ public class FileManager {
                 ds.writeByte(theseeSquare.getColumn());
 
                 // Écriture de la position de la sortie
-                for (int i = 0; i < grid.getSize(); i++) {
-                    for (int j = 0; j < grid.getSize(); j++) {
-                        Square square = grid.getSquare(i, j);
-                        if (square.isExit()) {
-                            ds.writeByte(square.getRow());
-                            ds.writeByte(square.getColumn());
-                            break;
-                        }
-                    }
-                }
+                Square exitSquare = grid.getExit();
+                ds.writeByte(exitSquare.getRow());
+                ds.writeByte(exitSquare.getColumn());
 
                 // Écriture des murs
                 int bit = 0;
@@ -95,6 +89,7 @@ public class FileManager {
                 if (bit != 0) {
                     ds.writeByte(value);
                 }
+                ds.close();
             } catch (Exception e) {
                 throw new Exception("Une erreur est survenue lors de l'écriture du fichier.");
             }

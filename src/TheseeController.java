@@ -1,9 +1,5 @@
-import javax.swing.*;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
-
-public class TheseeController implements KeyListener {
-    private Thesee model;
+public class TheseeController {
+    private final Thesee model;
     private GridView gridView;
 
     public TheseeController(Thesee model, GridView gridView) {
@@ -11,78 +7,71 @@ public class TheseeController implements KeyListener {
         this.gridView = gridView;
     }
 
-    public boolean moveUp() {
+    public TheseeController(Thesee model) {
+        this.model = model;
+    }
+
+    /**
+     * Move Thésée in the given direction
+     * @param direction The direction to move Thésée to
+     * @param simulation The simulation model
+     * @return true if the move was successful, false otherwise.
+     */
+    public boolean move(Direction direction, Simulation simulation) {
+        simulation.addMove();
         try {
-            Square currentSquare = this.model.getSquare();
-            Square newSquare = currentSquare.getGrid().getSquare(currentSquare.getRow(), currentSquare.getColumn() - 1);
-            if (newSquare.isWall()) return false;
-            this.model.setSquare(newSquare);
-            this.gridView.repaint();
+            Square newSquare = this.model.getSquare(direction);
+            newSquare.setVisited(true);
+            // If the new square is a wall, add a move to simulate the rollback of the move
+            if (newSquare.isWall()) {
+                simulation.addMove();
+                if (this.gridView != null) this.gridView.repaint();
+                return false;
+            }
+            if (newSquare.isExit()) simulation.setEnded();
+            else this.model.setSquare(newSquare);
+            if (this.gridView != null) this.gridView.repaint();
             return true;
         } catch (Exception e) {
             return false;
         }
     }
 
-    public boolean moveDown() {
+    /**
+     * Get the available directions for the next move.
+     * It helps prevent Thésée from going out of the grid.
+     * @return The available directions
+     */
+    public Direction[] getAvailableDirections() {
+        Direction[] availableDirections = new Direction[4];
+        int availableDirectionsCount = 0;
+
         try {
-            Square currentSquare = this.model.getSquare();
-            Square newSquare = currentSquare.getGrid().getSquare(currentSquare.getRow(), currentSquare.getColumn() + 1);
-            if (newSquare.isWall()) return false;
-            this.model.setSquare(newSquare);
-            this.gridView.repaint();
-            return true;
-        } catch (Exception e) {
-            return false;
-        }
-    }
+            this.model.getSquare(Direction.UP);
+            availableDirections[availableDirectionsCount] = Direction.UP;
+            availableDirectionsCount++;
+        } catch (Exception ignored) {}
 
-    public boolean moveLeft() {
         try {
-            Square currentSquare = this.model.getSquare();
-            Square newSquare = currentSquare.getGrid().getSquare(currentSquare.getRow() - 1, currentSquare.getColumn());
-            if (newSquare.isWall()) return false;
-            this.model.setSquare(newSquare);
-            this.gridView.repaint();
-            return true;
-        } catch (Exception e) {
-            return false;
-        }
-    }
+            this.model.getSquare(Direction.DOWN);
+            availableDirections[availableDirectionsCount] = Direction.DOWN;
+            availableDirectionsCount++;
+        } catch (Exception ignored) {}
 
-    public boolean moveRight() {
         try {
-            Square currentSquare = this.model.getSquare();
-            Square newSquare = currentSquare.getGrid().getSquare(currentSquare.getRow() + 1, currentSquare.getColumn());
-            if (newSquare.isWall()) return false;
-            this.model.setSquare(newSquare);
-            this.gridView.repaint();
-            return true;
-        } catch (Exception e) {
-            return false;
-        }
-    }
+            this.model.getSquare(Direction.LEFT);
+            availableDirections[availableDirectionsCount] = Direction.LEFT;
+            availableDirectionsCount++;
+        } catch (Exception ignored) {}
 
-    @Override
-    public void keyPressed(KeyEvent e) {
-        int keyCode = e.getKeyCode();
-        boolean moved;
-        if (keyCode == KeyEvent.VK_UP) {
-            moved = moveUp();
-        } else if (keyCode == KeyEvent.VK_DOWN) {
-            moved = moveDown();
-        } else if (keyCode == KeyEvent.VK_LEFT) {
-            moved = moveLeft();
-        } else if (keyCode == KeyEvent.VK_RIGHT) {
-            moved = moveRight();
-        }
-    }
+        try {
+            this.model.getSquare(Direction.RIGHT);
+            availableDirections[availableDirectionsCount] = Direction.RIGHT;
+            availableDirectionsCount++;
+        } catch (Exception ignored) {}
 
-    @Override
-    public void keyReleased(KeyEvent e) {
-    }
-
-    @Override
-    public void keyTyped(KeyEvent e) {
+        Direction[] availableDirectionsTrimmed = new Direction[availableDirectionsCount];
+        System.arraycopy(availableDirections, 0, availableDirectionsTrimmed, 0, availableDirectionsCount);
+        return availableDirectionsTrimmed;
     }
 }

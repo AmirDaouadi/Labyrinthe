@@ -1,8 +1,10 @@
 public class Square {
-    public final int row;
-    public final int column;
-    public int type = 0;
-    private Grid gridModel;
+    private final int row;
+    private final int column;
+    private int type = 0;
+    private boolean isVisited = false;
+    private boolean isAccessible = false;
+    private final Grid gridModel;
 
     public Square(Grid gridModel, int row, int column) {
         this.gridModel = gridModel;
@@ -26,14 +28,6 @@ public class Square {
         return this.type == 2;
     }
 
-    /**
-     * Checks if the current square is empty (not a wall and not an exit)
-     * @return true if the current square is empty, false otherwise
-     */
-    public boolean isEmpty() {
-        return this.type == 0;
-    }
-
     public boolean isThesee() {
         return this.gridModel.getThesee().getSquare() == this;
     }
@@ -52,16 +46,11 @@ public class Square {
      */
     public void setExit() throws Exception {
         if (this.gridModel.getThesee().getSquare() == this) throw new Exception("Vous ne pouvez pas placer la sortie sur la même case que Thésée. Déplacez d'abord Thésée puis réessayez.");
-        for (int i = 0; i < this.gridModel.getSize(); i++) {
-            for (int j = 0; j < this.gridModel.getSize(); j++) {
-                try {
-                    if (this.gridModel.getSquare(i, j).isExit()) {
-                        this.gridModel.getSquare(i, j).setEmpty();
-                    }
-                } catch (Exception e) {
-                    System.err.println(e.getMessage());
-                }
-            }
+
+        Square oldExit = this.gridModel.getExit();
+
+        if (oldExit != null) {
+            oldExit.setEmpty();
         }
 
         this.type = 2;
@@ -84,5 +73,21 @@ public class Square {
 
     public Grid getGrid() {
         return this.gridModel;
+    }
+
+    public boolean isVisited() {
+        return this.isVisited;
+    }
+
+    public void setVisited(boolean isVisited) {
+        this.isVisited = isVisited;
+    }
+
+    public boolean isAccessible() {
+        return this.isAccessible;
+    }
+
+    public void setAccessible(boolean isAccessible) {
+        this.isAccessible = isAccessible;
     }
 }

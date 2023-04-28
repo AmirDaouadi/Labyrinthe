@@ -1,3 +1,11 @@
+# If the first argument is "run"...
+ifeq (run,$(firstword $(MAKECMDGOALS)))
+  # use the rest as arguments for "run"
+  RUN_ARGS := $(wordlist 2,$(words $(MAKECMDGOALS)),$(MAKECMDGOALS))
+  # ...and turn them into do-nothing targets
+  $(eval $(RUN_ARGS):;@:)
+endif
+
 ### VARIABLES ###
 
 JC = javac
@@ -21,7 +29,7 @@ $(OUTDIR)/Main.class : $(OFILES)
 ### REGLES OPTIONNELLES ###
 
 run : $(OUTDIR)/Main.class
-	${JVM} ${JVMFLAGS} -cp $(OUTDIR) Main
+	${JVM} ${JVMFLAGS} -cp $(OUTDIR) Main $(RUN_ARGS)
 
 clean :
 	-rm -rf $(OUTDIR)

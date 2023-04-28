@@ -2,15 +2,13 @@ import javax.swing.*;
 import java.awt.*;
 
 public class GridView extends JPanel {
-    public Window window;
+    public final Window window;
     protected Grid model;
     protected int gridSize;
     protected int gridStartX;
     protected int gridStartY;
     protected int squareSize;
     private Font font;
-    private final String exit = "∩";
-    private final String thesee = "Θ";
 
     /**
      * Manages the display of the grid
@@ -44,7 +42,11 @@ public class GridView extends JPanel {
             for (int i = 0; i < this.model.getSize(); i++) {
                 for (int j = 0; j < this.model.getSize(); j++) {
                     try {
-                        if (this.model.getSquare(i, j).isWall()) g.setColor(new Color(122, 68, 25));
+                        Square square = this.model.getSquare(i, j);
+
+                        if (square.isWall() && square.isVisited()) g.setColor(new Color(82, 79, 47));
+                        else if (square.isWall()) g.setColor(new Color(122, 68, 25));
+                        else if (square.isVisited()) g.setColor(new Color(41, 90, 69));
                         else g.setColor(new Color(77, 170, 87));
                         g.fillRect(this.gridStartX + (this.squareSize * j), this.gridStartY + (this.squareSize * i), this.squareSize, this.squareSize);
 
@@ -52,13 +54,15 @@ public class GridView extends JPanel {
                         FontMetrics metrics = g.getFontMetrics(this.font);
                         g.setFont(this.font);
                         // Draw exit
-                        if (this.model.getSquare(i, j).isExit()) {
-                            g.drawString(this.exit, (this.gridStartX + (this.squareSize * j)) + ((this.squareSize - metrics.stringWidth(this.exit)) / 2), (this.gridStartY + (this.squareSize * i)) + (((this.squareSize - metrics.getHeight()) / 2) + metrics.getAscent()));
+                        if (square.isExit()) {
+                            String exit = "∩";
+                            g.drawString(exit, (this.gridStartX + (this.squareSize * j)) + ((this.squareSize - metrics.stringWidth(exit)) / 2), (this.gridStartY + (this.squareSize * i)) + (((this.squareSize - metrics.getHeight()) / 2) + metrics.getAscent()));
                         }
 
                         // Draw Thésée
-                        if (this.model.getThesee().getSquare() == this.model.getSquare(i, j)) {
-                            g.drawString(this.thesee, (this.gridStartX + (this.squareSize * j)) + ((this.squareSize - metrics.stringWidth(this.thesee)) / 2), (this.gridStartY + (this.squareSize * i)) + (((this.squareSize - metrics.getHeight()) / 2) + metrics.getAscent()));
+                        if (this.model.getThesee().getSquare() == square) {
+                            String thesee = "Θ";
+                            g.drawString(thesee, (this.gridStartX + (this.squareSize * j)) + ((this.squareSize - metrics.stringWidth(thesee)) / 2), (this.gridStartY + (this.squareSize * i)) + (((this.squareSize - metrics.getHeight()) / 2) + metrics.getAscent()));
                         }
                     } catch (Exception e) {
                         System.out.println(e.getMessage());

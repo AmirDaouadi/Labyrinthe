@@ -1,0 +1,12 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Labyrinthe",
+            "request": "launch",
+            "mainClass": "Main",
+            "projectName": "SAE21_2022_c8f95a52"
+        }
+    ]
+}

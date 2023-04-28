@@ -1,7 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.awt.event.*;
 
 /**
  * Controller for the manual simulation view.
@@ -13,58 +12,68 @@ public class ManualSimulationController {
     /**
      * The simulation model
      */
-    private Simulation model;
+    private final ManualSimulation model;
+
     /**
      * The manual simulation view
      */
-    private ManualSimulationView view;
-    /**
-     * The grid model
-     */
-    private Grid grid;
+    private final ManualSimulationView view;
+
     /**
      * The algorithm used for the simulation
      */
     private Algo algo;
-    /**
-     * The restart button
-     */
-    private Button restartButton = new Button("Recommencer");
+
     /**
      * The next button
      */
-    private Button nextButton = new Button("Coup suivant");
+    private final Button nextButton = new Button("Coup suivant");
 
     /**
      * Constructor
-     * @param model The simulation model
+     * @param model The manual simulation model
      * @param view The manual simulation view
-     * @param algo The algorithm used for the simulation
      */
-    public ManualSimulationController(Simulation model, ManualSimulationView view, Algo algo) {
+    public ManualSimulationController(ManualSimulationView view, ManualSimulation model) {
         this.model = model;
         this.view = view;
-        this.algo = algo;
 
         JPanel buttons = new JPanel();
 
-        restartButton.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                algo.reset();
-            }
-        });
-        buttons.add(restartButton);
-
-        nextButton.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                algo.nextMove();
-                if (model.isSuccess()) {
-                    nextButton.setEnabled(false);
-                }
-            }
-        });
+        nextButton.addActionListener(e -> move());
         buttons.add(nextButton);
 
         this.view.add(buttons, BorderLayout.NORTH);
+
+        this.view.addKeyListener(new KeyAdapter() {
+            public void keyPressed(KeyEvent e) {
+                move();
+            }
+        });
+        this.view.setFocusable(true);
+        this.view.requestFocusInWindow();
+
+        run();
+    }
+
+    /**
+     * Run the simulation
+     */
+    public void run() {
+        if (this.model.getAlgoType() == AlgoType.RANDOM) {
+            this.algo = new RandomAlgo(this.model.getGrid(), this.model.getSimulation());
+        } else {
+            this.algo = new DeterministicAlgo(this.model.getGrid(), this.model.getSimulation());
+        }
+    }
+
+    private void move() {
+        if (model.getSimulation().isEnded()) return;
+        this.algo.nextMove();
+        this.view.repaint();
+        if (model.getSimulation().isEnded()) {
+            nextButton.setEnabled(false);
+            JOptionPane.showMessageDialog(view, "Partie terminée en " + model.getSimulation().getMoves() + " coups !", "Fin de partie", JOptionPane.INFORMATION_MESSAGE);
+        }
     }
 }

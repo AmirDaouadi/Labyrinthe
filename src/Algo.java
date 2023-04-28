@@ -10,8 +10,4 @@ public interface Algo {
      */
     void nextMove();
 
-    /**
-     * Resets the algorithm
-     */
-    void reset();
 }

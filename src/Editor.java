@@ -1,5 +1,5 @@
 public class Editor {
-    private Grid gridModel;
+    private final Grid gridModel;
 
     public Editor(Grid gridModel) {
         this.gridModel = gridModel;

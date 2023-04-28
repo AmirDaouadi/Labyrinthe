@@ -1,9 +1,10 @@
 import javax.swing.*;
+import javax.swing.filechooser.FileNameExtensionFilter;
 import java.awt.*;
 import java.io.File;
 
 public class HomeView extends JPanel {
-    private Window window;
+    public final Window window;
 
     public HomeView(Window window) {
         this.window = window;
@@ -40,52 +41,50 @@ public class HomeView extends JPanel {
     }
 
     private Button choisirGrille() {
-        JPanel panel = new JPanel();
         Button choisirGrille = new Button("Générer une grille", new Dimension(250, 50));
 
         choisirGrille.addActionListener(e -> {
-            String strTaille = JOptionPane.showInputDialog(panel, "Entrez la taille de la grille :", "Taille de la grille", JOptionPane.PLAIN_MESSAGE);
+            String strTaille = JOptionPane.showInputDialog(this, "Entrez la taille de la grille :", "Taille de la grille", JOptionPane.PLAIN_MESSAGE);
             if (strTaille != null && !strTaille.isEmpty()) {
                 if (!Character.isDigit(strTaille.charAt(0))) {
-                    JOptionPane.showMessageDialog(panel, "Le premier caractère doit être un chiffre ou nombre.", "Erreur", JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(this, "Le premier caractère doit être un chiffre ou nombre.", "Erreur", JOptionPane.ERROR_MESSAGE);
                     return;
                 }
                 try {
                     int taille = Integer.parseInt(strTaille);
-                    if (taille > 3 && taille < 21) {
+                    if (taille >= 2 && taille <= 255) {
+                        if (!sizeWarning(this, taille)) return;
+
                         String[] options = {"Remplir aléatoirement", "Partir d'une grille vide"};
-                        int choix = JOptionPane.showOptionDialog(panel, "Choisissez comment remplir la grille :", "Remplissage de la grille", JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, options, options[0]);
+                        int choix = JOptionPane.showOptionDialog(this, "Choisissez comment remplir la grille :", "Remplissage de la grille", JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, options, options[0]);
 
                         EditorView editorView = new EditorView(window);
                         EditorController editorController = new EditorController(new Editor(new Grid(taille)), editorView);
                         switch (choix) {
-                            case 0:
+                            case 0 -> {
                                 // afficher la grille aléatoirement
                                 editorController.random();
                                 window.setContentPane(editorView);
                                 window.validate();
-                                break;
-                            case 1:
+                            }
+                            case 1 -> {
                                 window.setContentPane(editorView);
                                 window.validate();
-                                break;
-                            default:
+                            }
+                            default ->
                                 // gérer le cas où aucun choix n'a été fait
-                                JOptionPane.showMessageDialog(panel, "Aucun choix n'a été fait.", "Attention", JOptionPane.WARNING_MESSAGE);
-                                return;
+                                    JOptionPane.showMessageDialog(this, "Aucun choix n'a été fait.", "Attention", JOptionPane.WARNING_MESSAGE);
                         }
 
                     } else {
-                        String errorMessage = "La taille doit être au moins de 4.";
-                        if (taille >= 21) {
-                            errorMessage = "La taille ne doit pas dépasser 20.";
+                        String errorMessage = "La taille doit être supérieur ou égale à 2.";
+                        if (taille > 255) {
+                            errorMessage = "La taille doit être inférieur ou égale à 255.";
                         }
-                        JOptionPane.showMessageDialog(panel, errorMessage, "Erreur", JOptionPane.ERROR_MESSAGE);
+                        JOptionPane.showMessageDialog(this, errorMessage, "Erreur", JOptionPane.ERROR_MESSAGE);
                     }
                 } catch (NumberFormatException ex) {
-                    JOptionPane.showMessageDialog(panel, "Tapez " + strTaille.charAt(0) + " pour une grille " + strTaille.charAt(0) +"x"+ strTaille.charAt(0) +".", "Erreur", JOptionPane.ERROR_MESSAGE);
-
-
+                    JOptionPane.showMessageDialog(this, "Tapez " + strTaille.charAt(0) + " pour une grille " + strTaille.charAt(0) +"x"+ strTaille.charAt(0) +".", "Erreur", JOptionPane.ERROR_MESSAGE);
                 }
             }
         });
@@ -94,27 +93,44 @@ public class HomeView extends JPanel {
     }
 
     private Button importerGrille() {
-        JPanel panel = new JPanel();
         Button importerGrille = new Button("Importer une grille", new Dimension(250, 50));
 
         importerGrille.addActionListener(e -> {
             JFileChooser fileChooser = new JFileChooser();
-            fileChooser.setDialogTitle("Selectionnez le fichier ou se trouve votre grille");
-            int choix = fileChooser.showOpenDialog(panel);
+            fileChooser.setDialogTitle("Sélectionnez le fichier où se trouve votre grille");
+            fileChooser.setFileSelectionMode(JFileChooser.FILES_ONLY);
+            fileChooser.setMultiSelectionEnabled(false);
+            fileChooser.setAcceptAllFileFilterUsed(false);
+            fileChooser.setFileFilter(new FileNameExtensionFilter("Fichier labyrinthe (*.lab)", "lab"));
+            int choix = fileChooser.showOpenDialog(this);
             if (choix == JFileChooser.APPROVE_OPTION) {
                 File fichier = fileChooser.getSelectedFile();
                 try {
+                    Grid grid = FileManager.importGrid(fichier);
+                    if (!sizeWarning(this, grid.getSize())) return;
                     EditorView editorView = new EditorView(window);
-                    new EditorController(new Editor(FileManager.importGrid(fichier)), editorView);
+                    new EditorController(new Editor(grid), editorView);
                     window.setContentPane(editorView);
                     window.validate();
                 } catch (Exception ex) {
-                    JOptionPane.showMessageDialog(panel, ex.getMessage(), "Erreur", JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(this, ex.getMessage(), "Erreur", JOptionPane.ERROR_MESSAGE);
                 }
             }
         });
 
         return importerGrille;
+    }
+
+    /**
+     * Shows a warning message if the grid size is too big
+     * @param size the size of the grid
+     * @return true if the user wants to continue, false otherwise
+     */
+    public static boolean sizeWarning(JComponent parentComponent, int size) {
+        if (size <= 25) return true;
+        String[] options = {"Abandonner", "Continuer avec cette grille"};
+        int choice = JOptionPane.showOptionDialog(parentComponent, "Vous essayez d'ouvrir une grille de taille " + size + "x" + size + ".\nEn continuant avec cette grille, vous pourrez rencontrer des difficultées lors de l'edition et la durée des simulations de résolutions pourra être impactée.\nVoulez-vous continuer quand même ?", "Attention", JOptionPane.DEFAULT_OPTION, JOptionPane.WARNING_MESSAGE, null, options, options[0]);
+        return choice != 0;
     }
 
     @Override

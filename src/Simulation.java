@@ -11,9 +11,9 @@ public class Simulation {
     private int moves = 0;
 
     /**
-     * If the simulation has been successful or not
+     * If the simulation has ended or not
      */
-    private boolean success = false;
+    private boolean end = false;
 
     /**
      * Get the number of moves of the simulation
@@ -24,11 +24,18 @@ public class Simulation {
     }
 
     /**
-     * Get if the simulation has been successful or not
-     * @return If the simulation has been successful or not
+     * Check if the simulation has ended or not
+     * @return If the simulation has ended or not
      */
-    public boolean isSuccess() {
-        return this.success;
+    public boolean isEnded() {
+        return this.end;
+    }
+
+    /**
+     * Set the simulation as ended
+     */
+    public void setEnded() {
+        this.end = true;
     }
 
     /**
@@ -38,11 +45,4 @@ public class Simulation {
         this.moves++;
     }
 
-    /**
-     * Set if the simulation has been successful or not
-     * @param success If the simulation has been successful or not
-     */
-    public void setSuccess(boolean success) {
-        this.success = success;
-    }
 }
