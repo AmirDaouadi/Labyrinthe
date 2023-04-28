@@ -26,7 +26,16 @@ public class GridView extends JPanel {
     }
 
     public Square click(MouseEvent e) {
-        // TODO: Détection du clic sur une case
+        if ((e.getX() < this.gridStartX) || (e.getX() > (this.gridStartX + this.gridSize)) || (e.getY() < this.gridStartY) || (e.getY() > (this.gridStartY + this.gridSize))) return null;
+        int x = (e.getX() - this.gridStartX) / this.squareSize;
+        int y = (e.getY() - this.gridStartY) / this.squareSize;
+        if ((x >= 0) && (x < this.model.getSize()) && (y >= 0) && (y < this.model.getSize())) {
+            try {
+                return this.model.getSquare(y, x);
+            } catch (Exception ex) {
+                return null;
+            }
+        }
         return null;
     }
 

@@ -35,14 +35,26 @@ public class GridController {
                         if (square.isWall()) {
                             square.setEmpty();
                         } else {
-                            square.setWall();
+                            try {
+                                square.setWall();
+                            } catch (Exception ex) {
+                                JOptionPane.showMessageDialog(view, ex.getMessage(), "Erreur", JOptionPane.ERROR_MESSAGE);
+                            }
                         }
                         view.repaint();
                     } else if (editMode == Mode.THESEE) {
-                        model.getThesee().setSquare(square);
+                        try {
+                            model.getThesee().setSquare(square);
+                        } catch (Exception ex) {
+                            JOptionPane.showMessageDialog(view, ex.getMessage(), "Erreur", JOptionPane.ERROR_MESSAGE);
+                        }
                         view.repaint();
                     } else if (editMode == Mode.EXIT) {
-                        square.setExit();
+                        try {
+                            square.setExit();
+                        } catch (Exception ex) {
+                            JOptionPane.showMessageDialog(view, ex.getMessage(), "Erreur", JOptionPane.ERROR_MESSAGE);
+                        }
                         view.repaint();
                     }
                 }
