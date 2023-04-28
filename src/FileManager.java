@@ -1,6 +1,17 @@
 import java.io.*;
-
+/**
+ * Class to manage file import/export
+ * @version 1.0
+ * @author Amir Daouadi
+ * @author Lyanis Souidi
+ */
 public class FileManager {
+    /**
+     * Import a grid from a file
+     * @param file The file to import
+     * @return The imported grid
+     * @throws Exception If an error occurs during the import
+     */
     public static Grid importGrid(File file) throws Exception {
         Grid grid;
         try {
@@ -24,9 +35,7 @@ public class FileManager {
                     }
                 }
                 ds.close();
-            } catch (ArrayIndexOutOfBoundsException e) {
-                throw new Exception("Le fichier est corrompu.");
-            } catch (IOException e) {
+            } catch (Exception e) {
                 throw new Exception("Une erreur est survenue lors de la lecture du fichier.");
             }
             return grid;
@@ -35,68 +44,62 @@ public class FileManager {
         }
     }
 
+    /**
+     * Export a grid to a file
+     * @param grid The grid to export
+     * @param file The file to export to
+     * @throws Exception If an error occurs during the export
+     */
     public static void exportGrid(Grid grid, File file) throws Exception {
-        try (FileOutputStream fs = new FileOutputStream(file);
-             DataOutputStream ds = new DataOutputStream(fs)) {
+        try {
+            FileOutputStream fs = new FileOutputStream(file);
+            DataOutputStream ds = new DataOutputStream(fs);
+            try {
+                // Écriture de la taille de la grille
+                ds.writeByte(grid.getSize());
 
-            // Écriture de la taille de la grille
-            ds.writeByte(grid.getSize());
+                // Écriture de la position de Thésée
+                Square theseeSquare = grid.getThesee().getSquare();
+                ds.writeByte(theseeSquare.getRow());
+                ds.writeByte(theseeSquare.getColumn());
 
-            // Écriture de la position de Thésée
-            Square theseeSquare = grid.getThesee().getSquare();
-            ds.writeByte(theseeSquare.getRow());
-            ds.writeByte(theseeSquare.getColumn());
-
-            // Écriture de la position de la sortie
-            for (int i = 0; i < grid.getSize(); i++) {
-                for (int j = 0; j < grid.getSize(); j++) {
-                    Square square = grid.getSquare(i,j);
-                    if (square.isExit()) {
-                        ds.writeByte(square.getRow());
-                        ds.writeByte(square.getColumn());
-                        break;
+                // Écriture de la position de la sortie
+                for (int i = 0; i < grid.getSize(); i++) {
+                    for (int j = 0; j < grid.getSize(); j++) {
+                        Square square = grid.getSquare(i, j);
+                        if (square.isExit()) {
+                            ds.writeByte(square.getRow());
+                            ds.writeByte(square.getColumn());
+                            break;
+                        }
                     }
                 }
-            }
 
-
-            // Écriture des murs
-            int bit = 0;
-            byte value = 0;
-            for (int i = 0; i < grid.getSize(); i++) {
-                for (int j = 0; j < grid.getSize(); j++) {
-                    Square square = grid.getSquare(i, j);
-                    if (square.isWall()) {
-                        value |= 1 << (7 - bit);
-                    }
-                    bit++;
-                    if (bit == 8) {
-                        ds.writeByte(value);
-                        value = 0;
-                        bit = 0;
+                // Écriture des murs
+                int bit = 0;
+                byte value = 0;
+                for (int i = 0; i < grid.getSize(); i++) {
+                    for (int j = 0; j < grid.getSize(); j++) {
+                        Square square = grid.getSquare(i, j);
+                        if (square.isWall()) {
+                            value |= 1 << (7 - bit);
+                        }
+                        bit++;
+                        if (bit == 8) {
+                            ds.writeByte(value);
+                            value = 0;
+                            bit = 0;
+                        }
                     }
                 }
+                if (bit != 0) {
+                    ds.writeByte(value);
+                }
+            } catch (Exception e) {
+                throw new Exception("Une erreur est survenue lors de l'écriture du fichier.");
             }
-            if (bit != 0) {
-                ds.writeByte(value);
-            }
-        } catch (IOException e) {
-            throw new Exception("Une erreur est survenue lors de l'écriture du fichier.");
+        } catch (FileNotFoundException e){
+            throw new Exception("Fichier non trouvé.");
         }
-    }
-
-    // Test (à retirer)
-    public static void main(String[] args) throws Exception {
-        Grid grid = importGrid(new File("./src/petit.lab"));
-
-        System.out.println("Grille " + grid.getSize() + "x" + grid.getSize() + " :");
-        for (int i = 0; i < grid.getSize(); i++) {
-            for (int j = 0; j < grid.getSize(); j++) {
-                Square square = grid.getSquare(i, j);
-                System.out.println("\tCase " + i + "x" + j + " : isEmpty:" + square.isEmpty() + ", isWall:" + square.isWall() + ", isExit:" + square.isExit() + ", isThesee:" + square.isThesee());
-            }
-        }
-
-        exportGrid(grid, new File("./src/petit2.lab"));
     }
 }
