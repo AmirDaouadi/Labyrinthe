@@ -11,8 +11,8 @@ public class HomeView extends JPanel {
         JLabel texte = getTitre();
 
         //Récupération des boutons créés dans la classe Boutons
-        JButton choisirGrille = choisirGrille(this.window);
-        JButton importerGrille = importerGrille(this.window);
+        JButton choisirGrille = choisirGrille();
+        JButton importerGrille = importerGrille();
 
         // Création du panel pour le texte
         JPanel panelTexte = new JPanel(new FlowLayout(FlowLayout.CENTER, 0, 0));
@@ -39,7 +39,7 @@ public class HomeView extends JPanel {
         return texte;
     }
 
-    private static Button choisirGrille(Window window) {
+    private Button choisirGrille() {
         JPanel panel = new JPanel();
         Button choisirGrille = new Button("Générer une grille", new Dimension(250, 50));
 
@@ -93,7 +93,7 @@ public class HomeView extends JPanel {
         return choisirGrille;
     }
 
-    private static Button importerGrille(Window window) {
+    private Button importerGrille() {
         JPanel panel = new JPanel();
         Button importerGrille = new Button("Importer une grille", new Dimension(250, 50));
 
