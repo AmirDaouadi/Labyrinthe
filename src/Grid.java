@@ -1,6 +1,5 @@
 public class Grid {
     private Square[][] squares;
-    private int squareSize;
     private Thesee thesee = new Thesee();
 
     public Grid(int size) {

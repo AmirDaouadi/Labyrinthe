@@ -58,17 +58,18 @@ public class HomeView extends JPanel {
                     if (taille > 3 && taille < 21) {
                         String[] options = {"Remplir aléatoirement", "Partir d'une grille vide"};
                         int choix = JOptionPane.showOptionDialog(panel, "Choisissez comment remplir la grille :", "Remplissage de la grille", JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, options, options[0]);
-                        GridView gridView = new GridView(window);
-                        GridController grille = new GridController(new Grid(taille), gridView);
+
+                        EditorView editorView = new EditorView(window);
+                        EditorController editorController = new EditorController(new Editor(new Grid(taille)), editorView);
                         switch (choix) {
                             case 0:
                                 // afficher la grille aléatoirement
-                                grille.random();
-                                window.setContentPane(gridView);
+                                editorController.random();
+                                window.setContentPane(editorView);
                                 window.validate();
                                 break;
                             case 1:
-                                window.setContentPane(gridView);
+                                window.setContentPane(editorView);
                                 window.validate();
                                 break;
                             default:
@@ -109,9 +110,9 @@ public class HomeView extends JPanel {
             if (choix == JFileChooser.APPROVE_OPTION) {
                 File fichier = fileChooser.getSelectedFile();
                 try {
-                    GridView gridView = new GridView(window);
-                    new GridController(FileManager.importGrid(fichier), gridView);
-                    window.setContentPane(gridView);
+                    EditorView editorView = new EditorView(window);
+                    new EditorController(new Editor(FileManager.importGrid(fichier)), editorView);
+                    window.setContentPane(editorView);
                     window.validate();
                 } catch (Exception ex) {
                     JOptionPane.showMessageDialog(panel, ex.getMessage(), "Erreur", JOptionPane.ERROR_MESSAGE);

@@ -1,14 +1,13 @@
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.MouseEvent;
 
 public class GridView extends JPanel {
-    private Window window;
-    private Grid model;
-    private int gridSize;
-    private int gridStartX;
-    private int gridStartY;
-    private int squareSize;
+    public Window window;
+    protected Grid model;
+    protected int gridSize;
+    protected int gridStartX;
+    protected int gridStartY;
+    protected int squareSize;
     private Font font;
     private final String exit = "∩";
     private final String thesee = "Θ";
@@ -19,24 +18,12 @@ public class GridView extends JPanel {
     public GridView(Window window) {
         super();
         this.window = window;
+        this.setOpaque(false);
+        this.setPreferredSize(new Dimension(700, 500));
     }
 
     public void setGrid(Grid model) {
         this.model = model;
-    }
-
-    public Square click(MouseEvent e) {
-        if ((e.getX() < this.gridStartX) || (e.getX() > (this.gridStartX + this.gridSize)) || (e.getY() < this.gridStartY) || (e.getY() > (this.gridStartY + this.gridSize))) return null;
-        int x = (e.getX() - this.gridStartX) / this.squareSize;
-        int y = (e.getY() - this.gridStartY) / this.squareSize;
-        if ((x >= 0) && (x < this.model.getSize()) && (y >= 0) && (y < this.model.getSize())) {
-            try {
-                return this.model.getSquare(y, x);
-            } catch (Exception ex) {
-                return null;
-            }
-        }
-        return null;
     }
 
     private void calculateProportions() {
