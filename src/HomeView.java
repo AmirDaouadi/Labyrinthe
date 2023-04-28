@@ -95,7 +95,7 @@ public class HomeView extends JPanel {
         return choisirGrille;
     }
 
-    private static JButton importerGrille(JFrame window) {
+    private static JButton importerGrille(Window window) {
         JPanel panel = new JPanel();
         JButton importerGrille = new JButton("Importer une grille");
         importerGrille.setPreferredSize(new Dimension(250, 50));
@@ -108,7 +108,14 @@ public class HomeView extends JPanel {
             int choix = fileChooser.showOpenDialog(panel);
             if (choix == JFileChooser.APPROVE_OPTION) {
                 File fichier = fileChooser.getSelectedFile();
-                // TODO: charger la grille depuis le fichier
+                try {
+                    GridView gridView = new GridView(window);
+                    new GridController(FileManager.importGrid(fichier), gridView);
+                    window.setContentPane(gridView);
+                    window.validate();
+                } catch (Exception ex) {
+                    JOptionPane.showMessageDialog(panel, ex.getMessage(), "Erreur", JOptionPane.ERROR_MESSAGE);
+                }
             }
         });
 
