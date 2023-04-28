@@ -11,9 +11,9 @@ public class EditorController extends GridController {
     private EditorView view;
     private enum Mode { DISABLED, WALL, THESEE, EXIT }
     private Mode editMode = Mode.DISABLED;
-    private JButton editTheseeButton = new JButton("Placer Joueur");
-    private JButton editExitButton = new JButton("Placer Sortie");
-    private JButton editWallButton = new JButton("Enlever/Ajouter Murs");
+    private Button editTheseeButton = new Button("Placer Joueur");
+    private Button editExitButton = new Button("Placer Sortie");
+    private Button editWallButton = new Button("Enlever/Ajouter Murs");
 
     public EditorController(Editor model, EditorView view) {
         super(model.getGrid(), view);

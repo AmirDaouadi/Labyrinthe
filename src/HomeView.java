@@ -39,12 +39,9 @@ public class HomeView extends JPanel {
         return texte;
     }
 
-    private static JButton choisirGrille(Window window) {
+    private static Button choisirGrille(Window window) {
         JPanel panel = new JPanel();
-        JButton choisirGrille = new JButton("Générer une grille");
-        choisirGrille.setPreferredSize(new Dimension(250, 50));
-        choisirGrille.setFont(new Font("Arial", Font.BOLD, 20));
-        choisirGrille.setBackground(new Color(96, 175, 255));
+        Button choisirGrille = new Button("Générer une grille", new Dimension(250, 50));
 
         choisirGrille.addActionListener(e -> {
             String strTaille = JOptionPane.showInputDialog(panel, "Entrez la taille de la grille :", "Taille de la grille", JOptionPane.PLAIN_MESSAGE);
@@ -96,12 +93,9 @@ public class HomeView extends JPanel {
         return choisirGrille;
     }
 
-    private static JButton importerGrille(Window window) {
+    private static Button importerGrille(Window window) {
         JPanel panel = new JPanel();
-        JButton importerGrille = new JButton("Importer une grille");
-        importerGrille.setPreferredSize(new Dimension(250, 50));
-        importerGrille.setFont(new Font("Arial", Font.BOLD, 20));
-        importerGrille.setBackground(new Color(96, 175, 255));
+        Button importerGrille = new Button("Importer une grille", new Dimension(250, 50));
 
         importerGrille.addActionListener(e -> {
             JFileChooser fileChooser = new JFileChooser();
