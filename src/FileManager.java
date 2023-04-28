@@ -30,7 +30,7 @@ public class FileManager {
                             value = ds.readByte();
                             bit = 0;
                         }
-                        if (((value >> (7 - bit)) & 1) == 1) grid.getSquare(i, j).setWall();
+                        if (((value >> (7 - bit)) & 1) == 1) grid.getSquare(j, i).setWall();
                         bit++;
                     }
                 }
@@ -80,7 +80,7 @@ public class FileManager {
                 byte value = 0;
                 for (int i = 0; i < grid.getSize(); i++) {
                     for (int j = 0; j < grid.getSize(); j++) {
-                        Square square = grid.getSquare(i, j);
+                        Square square = grid.getSquare(j, i);
                         if (square.isWall()) {
                             value |= 1 << (7 - bit);
                         }
