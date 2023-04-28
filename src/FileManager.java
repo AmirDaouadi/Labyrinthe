@@ -36,7 +36,53 @@ public class FileManager {
     }
 
     public static void exportGrid(Grid grid, File file) throws Exception {
-        // TODO: Export de la grille
+        try (FileOutputStream fs = new FileOutputStream(file);
+             DataOutputStream ds = new DataOutputStream(fs)) {
+
+            // Écriture de la taille de la grille
+            ds.writeByte(grid.getSize());
+
+            // Écriture de la position de Thésée
+            Square theseeSquare = grid.getThesee().getSquare();
+            ds.writeByte(theseeSquare.getRow());
+            ds.writeByte(theseeSquare.getColumn());
+
+            // Écriture de la position de la sortie
+            for (int i = 0; i < grid.getSize(); i++) {
+                for (int j = 0; j < grid.getSize(); j++) {
+                    Square square = grid.getSquare(i,j);
+                    if (square.isExit()) {
+                        ds.writeByte(square.getRow());
+                        ds.writeByte(square.getColumn());
+                        break;
+                    }
+                }
+            }
+
+
+            // Écriture des murs
+            int bit = 0;
+            byte value = 0;
+            for (int i = 0; i < grid.getSize(); i++) {
+                for (int j = 0; j < grid.getSize(); j++) {
+                    Square square = grid.getSquare(i, j);
+                    if (square.isWall()) {
+                        value |= 1 << (7 - bit);
+                    }
+                    bit++;
+                    if (bit == 8) {
+                        ds.writeByte(value);
+                        value = 0;
+                        bit = 0;
+                    }
+                }
+            }
+            if (bit != 0) {
+                ds.writeByte(value);
+            }
+        } catch (IOException e) {
+            throw new Exception("Une erreur est survenue lors de l'écriture du fichier.");
+        }
     }
 
     // Test (à retirer)
