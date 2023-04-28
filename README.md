@@ -21,7 +21,14 @@ Une fois la [compilation du programme](#compilation) faite, exécuter le program
 java -cp out/ Main
 ```
 
-# Crédits
+## Documentation
+La documentation du programme est généré à l'aide de JavaDoc. Elle est disponible dans le dossier `doc/` et peut être consultée en ouvrant le fichier `index.html` dans un navigateur web.
+Utilisez la commande suivante pour générer la documentation :
+```bash
+make doc
+```
+
+## Crédits
 -   Code :
     - Amir Daouadi (@daouadi)
     - Lyanis Souidi (@souidi)

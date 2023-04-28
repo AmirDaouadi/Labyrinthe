@@ -7,6 +7,7 @@ JVMFLAGS =
 
 SRCDIR = ./src
 OUTDIR = ./out
+DOCDIR = ./doc
 OFILES = $(subst src/,out/,$(subst .java,.class,$(shell find $(SRCDIR)/ -name *.java)))
 
 ### REGLES ESSENTIELLES ###
@@ -24,8 +25,12 @@ run : $(OUTDIR)/Main.class
 
 clean :
 	-rm -rf $(OUTDIR)
+	-rm -rf $(DOCDIR)
 
 mrproper : clean $(OUTDIR)/Main.class
+
+doc :
+	javadoc -d $(DOCDIR) $(SRCDIR)/*.java
 
 ### BUTS FACTICES ###
 
