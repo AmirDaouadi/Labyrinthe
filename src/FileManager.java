@@ -1,7 +1,7 @@
 import java.io.*;
 /**
  * Class to manage file import/export
- * @version 1.0
+ * @version 1.1
  * @author Amir Daouadi
  * @author Lyanis Souidi
  */
@@ -18,16 +18,16 @@ public class FileManager {
             FileInputStream fs = new FileInputStream(file);
             DataInputStream ds = new DataInputStream(fs);
             try {
-                grid = new Grid(ds.readByte());
-                grid.getThesee().setSquare(grid.getSquare(ds.readByte(), ds.readByte()));
-                grid.getSquare(ds.readByte(), ds.readByte()).setExit();
+                grid = new Grid(ds.read());
+                grid.getThesee().setSquare(grid.getSquare(ds.read(), ds.read()));
+                grid.getSquare(ds.read(), ds.read()).setExit();
 
                 int bit = 8;
-                byte value = 0;
+                int value = 0;
                 for (int i = 0; i < grid.getSize(); i++) {
                     for (int j = 0; j < grid.getSize(); j++) {
                         if (bit == 8) {
-                            value = ds.readByte();
+                            value = ds.read();
                             bit = 0;
                         }
                         if (((value >> (7 - bit)) & 1) == 1) grid.getSquare(j, i).setWall();
