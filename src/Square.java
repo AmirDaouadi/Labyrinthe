@@ -37,14 +37,17 @@ public class Square {
     /**
      * Sets the current square as a wall
      */
-    public void setWall() {
+    public void setWall() throws Exception {
+        if (this.gridModel.getThesee().getSquare() == this) throw new Exception("Vous ne pouvez pas placer un mur sur la même case que Thésée. Déplacez d'abord Thésée puis réessayez.");
+        if (this.isExit()) throw new Exception("Vous ne pouvez pas placer un mur sur la même case que la sortie. Déplacez d'abord la sortie puis réessayez.");
         this.type = 1;
     }
 
     /**
      * Removes the existing exit from the grid (if it exists) and sets the current square as an exit
      */
-    public void setExit() {
+    public void setExit() throws Exception {
+        if (this.gridModel.getThesee().getSquare() == this) throw new Exception("Vous ne pouvez pas placer la sortie sur la même case que Thésée. Déplacez d'abord Thésée puis réessayez.");
         for (int i = 0; i < this.gridModel.getSize(); i++) {
             for (int j = 0; j < this.gridModel.getSize(); j++) {
                 try {
