@@ -120,6 +120,6 @@ public class HomeView extends JPanel {
     @Override
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
-        g.drawImage(new ImageIcon("./src/background.jpg").getImage(), 0, 0, getWidth(), getHeight(), null);
+        g.drawImage(new ImageIcon("./resources/img/background.jpg").getImage(), 0, 0, getWidth(), getHeight(), null);
     }
 }
