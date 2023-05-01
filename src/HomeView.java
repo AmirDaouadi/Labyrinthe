@@ -3,9 +3,19 @@ import javax.swing.filechooser.FileNameExtensionFilter;
 import java.awt.*;
 import java.io.File;
 
+/**
+ * The home view
+ */
 public class HomeView extends JPanel {
+    /**
+     * The window
+     */
     public final Window window;
 
+    /**
+     * Constructor
+     * @param window the window
+     */
     public HomeView(Window window) {
         this.window = window;
 
@@ -32,6 +42,10 @@ public class HomeView extends JPanel {
         add(panelBoutons, BorderLayout.CENTER);
     }
 
+    /**
+     * Creates the title
+     * @return the title
+     */
     private static JLabel getTitre() {
         JLabel texte = new JLabel("Choisissez votre type de grille", SwingConstants.CENTER);
         texte.setPreferredSize(new Dimension(800, 50));
@@ -40,6 +54,10 @@ public class HomeView extends JPanel {
         return texte;
     }
 
+    /**
+     * Creates the button to choose a grid
+     * @return the button
+     */
     private Button choisirGrille() {
         Button choisirGrille = new Button("Générer une grille", new Dimension(250, 50));
 
@@ -92,6 +110,10 @@ public class HomeView extends JPanel {
         return choisirGrille;
     }
 
+    /**
+     * Creates the button to import a grid
+     * @return the button
+     */
     private Button importerGrille() {
         Button importerGrille = new Button("Importer une grille", new Dimension(250, 50));
 
@@ -124,6 +146,7 @@ public class HomeView extends JPanel {
     /**
      * Shows a warning message if the grid size is too big
      * @param size the size of the grid
+     * @param parentComponent the parent component
      * @return true if the user wants to continue, false otherwise
      */
     public static boolean sizeWarning(JComponent parentComponent, int size) {
@@ -133,6 +156,10 @@ public class HomeView extends JPanel {
         return choice != 0;
     }
 
+    /**
+     * Paints the background
+     * @param g The graphics
+     */
     @Override
     public void paintComponent(Graphics g) {
         super.paintComponent(g);

@@ -1,8 +1,18 @@
 /**
  * Represents Thésée in the labyrinth.
+ * @version 1.0
+ * @author Amir Daouadi
+ * @author Lyanis Souidi
  */
 public class Thesee {
+    /**
+     * The square where Thésée is.
+     */
     private Square square;
+
+    /**
+     * The initial square where Thésée is.
+     */
     private Square intialSquare;
 
     /**

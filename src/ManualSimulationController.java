@@ -67,6 +67,9 @@ public class ManualSimulationController {
         }
     }
 
+    /**
+     * Makes the next move of the simulation
+     */
     private void move() {
         if (model.getSimulation().isEnded()) return;
         this.algo.nextMove();

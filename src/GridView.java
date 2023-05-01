@@ -1,17 +1,51 @@
 import javax.swing.*;
 import java.awt.*;
 
+/**
+ * Manages the display of the grid
+ * @version 1.0
+ * @author Amir Daouadi
+ * @author Lyanis Souidi
+ */
 public class GridView extends JPanel {
+    /**
+     * The window
+     */
     public final Window window;
+
+    /**
+     * The grid model
+     */
     protected Grid model;
+
+    /**
+     * The grid size in pixels
+     */
     protected int gridSize;
+
+    /**
+     * The grid x start position in pixels
+     */
     protected int gridStartX;
+
+    /**
+     * The grid y start position in pixels
+     */
     protected int gridStartY;
+
+    /**
+     * The size of one square in pixels
+     */
     protected int squareSize;
+
+    /**
+     * The font used to display the characters
+     */
     private Font font;
 
     /**
-     * Manages the display of the grid
+     * Constructor
+     * @param window The window
      */
     public GridView(Window window) {
         super();
@@ -20,10 +54,17 @@ public class GridView extends JPanel {
         this.setPreferredSize(new Dimension(700, 500));
     }
 
+    /**
+     * Sets the grid model
+     * @param model The grid model
+     */
     public void setGrid(Grid model) {
         this.model = model;
     }
 
+    /**
+     * Calculates the proportions of the grid
+     */
     private void calculateProportions() {
         this.gridSize = Math.min((getHeight() - 50), getWidth()) - 10;
         this.gridStartX = (getWidth() - this.gridSize) / 2;
@@ -32,6 +73,10 @@ public class GridView extends JPanel {
         this.font = new Font("Arial", Font.PLAIN, (int) (this.squareSize * 0.75));
     }
 
+    /**
+     * Paints the grid
+     * @param g The graphics
+     */
     @Override
     public void paintComponent(Graphics g) {
         super.paintComponent(g);

@@ -9,6 +9,9 @@ import java.awt.*;
  * @author Lyanis Souidi
  */
 public class AutoSimulationView extends JPanel {
+    /**
+     * The automatic simulation model
+     */
     public final AutoSimulation model;
 
     /**
@@ -22,6 +25,10 @@ public class AutoSimulationView extends JPanel {
         this.setPreferredSize(new Dimension(700, 500));
     }
 
+    /**
+     * Paint the view
+     * @param g The graphics
+     */
     @Override
     public void paintComponent(Graphics g) {
         super.paintComponent(g);

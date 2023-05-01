@@ -1,12 +1,34 @@
+/**
+ * The controller of Thésée.
+ * @version 1.0
+ * @author Amir Daouadi
+ * @author Lyanis Souidi
+ */
 public class TheseeController {
+    /**
+     * The model of Thésée
+     */
     private final Thesee model;
+
+    /**
+     * The view of Thésée
+     */
     private GridView gridView;
 
+    /**
+     * Constructor (with view)
+     * @param model The model of Thésée
+     * @param gridView The view of Thésée
+     */
     public TheseeController(Thesee model, GridView gridView) {
         this.model = model;
         this.gridView = gridView;
     }
 
+    /**
+     * Constructor (without view)
+     * @param model The model of Thésée
+     */
     public TheseeController(Thesee model) {
         this.model = model;
     }

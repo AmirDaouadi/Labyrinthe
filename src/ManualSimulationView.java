@@ -23,6 +23,10 @@ public class ManualSimulationView extends GridView {
         super.setGrid(this.model.getGrid());
     }
 
+    /**
+     * Add the moves counter to the view
+     * @param g The graphics
+     */
     @Override
     public void paintComponent(Graphics g) {
         super.paintComponent(g);

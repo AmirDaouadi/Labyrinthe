@@ -6,18 +6,68 @@ import java.awt.event.MouseEvent;
 import java.io.File;
 import java.util.Random;
 
+/**
+ * Controller for the grid editor
+ * @version 1.0
+ * @author Amir Daouadi
+ * @author Lyanis Souidi
+ */
 public class EditorController extends GridController {
+    /**
+     * The editor model
+     */
     private final Editor model;
+
+    /**
+     * The editor view
+     */
     private final EditorView view;
+
+    /**
+     * Enum for the edit mode
+     */
     private enum Mode { DISABLED, WALL, THESEE, EXIT }
+
+    /**
+     * The edit mode
+     */
     private Mode editMode = Mode.DISABLED;
+
+    /**
+     * If the grid has been edited
+     */
     private boolean edited = false;
+
+    /**
+     * Button used to place Thésée in the grid
+     */
     private final Button editTheseeButton = new Button("Modifier Thésée");
+
+    /**
+     * Button used to place the exit in the grid
+     */
     private final Button editExitButton = new Button("Modifier Sortie");
+
+    /**
+     * Button used to edit the walls in the grid
+     */
     private final Button editWallButton = new Button("Modifier Murs");
+
+    /**
+     * Button used to export the grid
+     */
     private final Button exportButton = new Button("Exporter");
+
+    /**
+     * Button used to start the simulation
+     */
     private final Button startButton = new Button("Démarrer");
 
+    /**
+     * Constructor
+     * @param model The editor model
+     * @param view The editor view
+     */
     public EditorController(Editor model, EditorView view) {
         super(model.getGrid(), view);
         this.model = model;

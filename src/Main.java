@@ -1,6 +1,14 @@
 import javax.swing.*;
 import java.io.File;
+
+/**
+ * The main class used to launch the application
+ */
 public class Main {
+    /**
+     * The main method
+     * @param args the command line arguments
+     */
     public static void main(String[] args) {
         Window window = new Window();
 
