@@ -1,0 +1,888 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="823px" height="755px" viewBox="-0.5 -0.5 823 755" animation="{&quot;scriptArr&quot;:[],&quot;cellIdArr&quot;:[]}" style="background-color: rgb(255, 255, 255);">
+    <g>
+        <g shape-node="">
+            <ellipse cell-id="SyX-sqmIP7GoD-vGlTKx-1" cx="50" cy="154" rx="50" ry="30" fill="#ffffff" stroke="#000000" stroke-width="2" pointer-events="all" />
+        </g>
+        <g shape-node="">
+            <g cell-id="SyX-sqmIP7GoD-vGlTKx-1" transform="translate(-0.5 -0.5)">
+                <switch cell-id="SyX-sqmIP7GoD-vGlTKx-1">
+                    <foreignObject cell-id="SyX-sqmIP7GoD-vGlTKx-1" style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 98px; height: 1px; padding-top: 154px; margin-left: 1px;">
+                            <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                                <div style="display: inline-block; font-size: 12px; font-family: &quot;Helvetica&quot;, &quot;VP Default&quot;; color: #000000; line-height: 1.2; pointer-events: all; word-break: break-word; white-space: normal; word-wrap: normal; ">
+                                    <div ani="">Début</div>
+                                </div>
+                            </div>
+                        </div>
+                    </foreignObject>
+                    <svg width="100%" height="100%">
+                        <defs>
+                            <path id="ptySK.GDgGH4DgGM" d="M33.984375,159.4125 h32.03125" />
+                        </defs>
+                        <text fill="rgb(0, 0, 0)" font-size="12px" font-family="Helvetica, &quot;VP Default&quot;" font-weight="400">
+                            <textPath xlink:href="#ptySK.GDgGH4DgGM" startOffset="50%" text-anchor="middle">
+                                <tspan xml:space="preserve">Début</tspan>
+                            </textPath>
+                        </text>
+                    </svg>
+                </switch>
+            </g>
+        </g>
+        <g shape-node="">
+            <rect cell-id="SyX-sqmIP7GoD-vGlTKx-3" x="191" y="124" width="162" height="60" rx="3.6" ry="3.6" fill="#ffffff" stroke="#000000" stroke-width="2" pointer-events="all" />
+        </g>
+        <g shape-node="">
+            <g cell-id="SyX-sqmIP7GoD-vGlTKx-3" transform="translate(-0.5 -0.5)">
+                <switch cell-id="SyX-sqmIP7GoD-vGlTKx-3">
+                    <foreignObject cell-id="SyX-sqmIP7GoD-vGlTKx-3" style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 160px; height: 1px; padding-top: 154px; margin-left: 192px;">
+                            <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                                <div style="display: inline-block; font-size: 12px; font-family: &quot;Helvetica&quot;, &quot;VP Default&quot;; color: #000000; line-height: 1.2; pointer-events: all; word-break: break-word; white-space: normal; word-wrap: normal; ">
+                                    <div ani="">Récupération des directions disponibles <br />
+                                        <font style="font-size: 10px">(pour ne pas sortir de la grille)</font>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </foreignObject>
+                    <svg width="100%" height="100%">
+                        <defs>
+                            <path id="ZtySK.GDgGH4DgGN" d="M192,145.021875 h160 M192,159.421875 h160 M192,173.821875 h160" />
+                            <path id="ZtySK.GDgGH4DgGO" d="M205.578125,173.703125 h132.84375" />
+                        </defs>
+                        <text fill="rgb(0, 0, 0)" font-size="12px" font-family="Helvetica, &quot;VP Default&quot;" font-weight="400">
+                            <textPath xlink:href="#ZtySK.GDgGH4DgGN">
+                                <tspan xml:space="preserve">Récupération des directions disponibles</tspan>
+                                <tspan xml:space="preserve" />
+                                <tspan xml:space="preserve" style="font-size: 10px">
+                  <tspan xml:space="preserve">(pour ne pas sortir de la grille)</tspan>
+                </tspan>
+                            </textPath>
+                        </text>
+                        <text fill="rgb(0, 0, 0)" font-size="10px" font-family="Helvetica, &quot;VP Default&quot;" font-weight="400">
+                            <textPath xlink:href="#ZtySK.GDgGH4DgGO" startOffset="50%" text-anchor="middle">
+                                <tspan xml:space="preserve">(pour ne pas sortir de la grille)</tspan>
+                            </textPath>
+                        </text>
+                    </svg>
+                </switch>
+            </g>
+        </g>
+        <g shape-node="">
+            <path cell-id="SyX-sqmIP7GoD-vGlTKx-4" d="M 100 154 L 184.63 154" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke" />
+            <path cell-id="SyX-sqmIP7GoD-vGlTKx-4" d="M 189.88 154 L 182.88 157.5 L 184.63 154 L 182.88 150.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all" />
+        </g>
+        <g shape-node="">
+            <path cell-id="SyX-sqmIP7GoD-vGlTKx-7" d="M 353 154 L 437.63 154" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke" />
+            <path cell-id="SyX-sqmIP7GoD-vGlTKx-7" d="M 442.88 154 L 435.88 157.5 L 437.63 154 L 435.88 150.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all" />
+        </g>
+        <g shape-node="">
+            <path cell-id="SyX-sqmIP7GoD-vGlTKx-9" d="M 499.61 693 L 538.39 693 C 555.29 693 569 706.43 569 723 C 569 739.57 555.29 753 538.39 753 L 499.61 753 C 482.71 753 469 739.57 469 723 C 469 706.43 482.71 693 499.61 693 Z" fill="#ffffff" stroke="#000000" stroke-width="2" stroke-miterlimit="10" pointer-events="all" />
+        </g>
+        <g shape-node="">
+            <g cell-id="SyX-sqmIP7GoD-vGlTKx-9" transform="translate(-0.5 -0.5)">
+                <switch cell-id="SyX-sqmIP7GoD-vGlTKx-9">
+                    <foreignObject cell-id="SyX-sqmIP7GoD-vGlTKx-9" style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 98px; height: 1px; padding-top: 723px; margin-left: 470px;">
+                            <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                                <div style="display: inline-block; font-size: 12px; font-family: &quot;Helvetica&quot;, &quot;VP Default&quot;; color: #000000; line-height: 1.2; pointer-events: all; word-break: break-word; white-space: normal; word-wrap: normal; ">
+                                    <div ani="">Fin de la simulation</div>
+                                </div>
+                            </div>
+                        </div>
+                    </foreignObject>
+                    <svg width="100%" height="100%">
+                        <defs>
+                            <path id="FtySK.GDgGH4DgGP" d="M470,721.209375 h98 M470,735.609375 h98" />
+                        </defs>
+                        <text fill="rgb(0, 0, 0)" font-size="12px" font-family="Helvetica, &quot;VP Default&quot;" font-weight="400">
+                            <textPath xlink:href="#FtySK.GDgGH4DgGP">
+                                <tspan xml:space="preserve">Fin de la simulation</tspan>
+                            </textPath>
+                        </text>
+                    </svg>
+                </switch>
+            </g>
+        </g>
+        <g shape-node="">
+            <path cell-id="SyX-sqmIP7GoD-vGlTKx-10" d="M 271.47 646.47 L 271.93 713 Q 272 723 282 723 L 462.63 723" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke" />
+            <path cell-id="SyX-sqmIP7GoD-vGlTKx-10" d="M 467.88 723 L 460.88 726.5 L 462.63 723 L 460.88 719.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all" />
+        </g>
+        <g shape-node="">
+            <g cell-id="SyX-sqmIP7GoD-vGlTKx-12" transform="translate(-0.5 -0.5)">
+                <switch cell-id="SyX-sqmIP7GoD-vGlTKx-12">
+                    <foreignObject cell-id="SyX-sqmIP7GoD-vGlTKx-12" style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 658px; margin-left: 259px;">
+                            <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                                <div style="display: inline-block; font-size: 11px; font-family: &quot;Helvetica&quot;, &quot;VP Default&quot;; color: #000000; line-height: 1.2; pointer-events: all; background-color: #ffffff; white-space: nowrap; ">
+                                    <div ani="">Oui</div>
+                                </div>
+                            </div>
+                        </div>
+                    </foreignObject>
+                    <svg width="100%" height="100%">
+                        <defs>
+                            <path id="ltySK.GDgGH4DgGQ" d="M250.9375,663.30625 h17.125" />
+                        </defs>
+                        <text fill="rgb(0, 0, 0)" font-size="11px" font-family="Helvetica, &quot;VP Default&quot;" font-weight="400">
+                            <textPath xlink:href="#ltySK.GDgGH4DgGQ" startOffset="50%" text-anchor="middle">
+                                <tspan xml:space="preserve">Oui</tspan>
+                            </textPath>
+                        </text>
+                    </svg>
+                </switch>
+            </g>
+        </g>
+        <g shape-node="">
+            <path cell-id="SyX-sqmIP7GoD-vGlTKx-8" d="M 272 497 L 347 572 L 272 647 L 197 572 Z" fill="#ffffff" stroke="#000000" stroke-width="2" stroke-miterlimit="10" pointer-events="all" />
+        </g>
+        <g shape-node="">
+            <g cell-id="SyX-sqmIP7GoD-vGlTKx-8" transform="translate(-0.5 -0.5)">
+                <switch cell-id="SyX-sqmIP7GoD-vGlTKx-8">
+                    <foreignObject cell-id="SyX-sqmIP7GoD-vGlTKx-8" style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 148px; height: 1px; padding-top: 572px; margin-left: 198px;">
+                            <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                                <div style="display: inline-block; font-size: 12px; font-family: &quot;Helvetica&quot;, &quot;VP Default&quot;; color: #000000; line-height: 1.2; pointer-events: all; word-break: break-word; white-space: normal; word-wrap: normal; ">
+                                    <div ani="">Toutes les <br />cases de la grille <br />accessibles depuis la position de Thésée <br />ont été <br />visitées ? </div>
+                                </div>
+                            </div>
+                        </div>
+                    </foreignObject>
+                    <svg width="100%" height="100%">
+                        <defs>
+                            <path id="VtySK.GDgGH4DgGR" d="M198,541.428125 h148 M198,555.828125 h148 M198,570.228125 h148 M198,584.628125 h148 M198,599.0281249999999 h148 M198,613.4281249999999 h148" />
+                            <path id="VtySK.GDgGH4DgGS" d="M198,541.428125 h148 M198,555.828125 h148 M198,570.228125 h148 M198,584.628125 h148 M198,599.0281249999999 h148 M198,613.4281249999999 h148" />
+                            <path id="1tySK.GDgGH4DgGT" d="M198,541.428125 h148 M198,555.828125 h148 M198,570.228125 h148 M198,584.628125 h148 M198,599.0281249999999 h148 M198,613.4281249999999 h148" />
+                            <path id="1tySK.GDgGH4DgGU" d="M198,541.428125 h148 M198,555.828125 h148 M198,570.228125 h148 M198,584.628125 h148 M198,599.0281249999999 h148 M198,613.4281249999999 h148" />
+                            <path id="1tySK.GDgGH4DgGV" d="M198,541.428125 h148 M198,555.828125 h148 M198,570.228125 h148 M198,584.628125 h148 M198,599.0281249999999 h148 M198,613.4281249999999 h148" />
+                        </defs>
+                        <text fill="rgb(0, 0, 0)" font-size="12px" font-family="Helvetica, &quot;VP Default&quot;" font-weight="400">
+                            <textPath xlink:href="#VtySK.GDgGH4DgGR">
+                                <tspan xml:space="preserve">Toutes les</tspan>
+                                <tspan xml:space="preserve" />
+                                <tspan xml:space="preserve">cases de la grille</tspan>
+                                <tspan xml:space="preserve" />
+                                <tspan xml:space="preserve">accessibles depuis la position de Thésée</tspan>
+                                <tspan xml:space="preserve" />
+                                <tspan xml:space="preserve">ont été</tspan>
+                                <tspan xml:space="preserve" />
+                                <tspan xml:space="preserve">visitées ?</tspan>
+                            </textPath>
+                        </text>
+                        <text fill="rgb(0, 0, 0)" font-size="12px" font-family="Helvetica, &quot;VP Default&quot;" font-weight="400">
+                            <textPath xlink:href="#VtySK.GDgGH4DgGS">
+                                <tspan xml:space="preserve">Toutes les</tspan>
+                                <tspan xml:space="preserve" />
+                                <tspan xml:space="preserve">cases de la grille</tspan>
+                                <tspan xml:space="preserve" />
+                                <tspan xml:space="preserve">accessibles depuis la position de Thésée</tspan>
+                                <tspan xml:space="preserve" />
+                                <tspan xml:space="preserve">ont été</tspan>
+                                <tspan xml:space="preserve" />
+                                <tspan xml:space="preserve">visitées ?</tspan>
+                            </textPath>
+                        </text>
+                        <text fill="rgb(0, 0, 0)" font-size="12px" font-family="Helvetica, &quot;VP Default&quot;" font-weight="400">
+                            <textPath xlink:href="#1tySK.GDgGH4DgGT">
+                                <tspan xml:space="preserve">Toutes les</tspan>
+                                <tspan xml:space="preserve" />
+                                <tspan xml:space="preserve">cases de la grille</tspan>
+                                <tspan xml:space="preserve" />
+                                <tspan xml:space="preserve">accessibles depuis la position de Thésée</tspan>
+                                <tspan xml:space="preserve" />
+                                <tspan xml:space="preserve">ont été</tspan>
+                                <tspan xml:space="preserve" />
+                                <tspan xml:space="preserve">visitées ?</tspan>
+                            </textPath>
+                        </text>
+                        <text fill="rgb(0, 0, 0)" font-size="12px" font-family="Helvetica, &quot;VP Default&quot;" font-weight="400">
+                            <textPath xlink:href="#1tySK.GDgGH4DgGU">
+                                <tspan xml:space="preserve">Toutes les</tspan>
+                                <tspan xml:space="preserve" />
+                                <tspan xml:space="preserve">cases de la grille</tspan>
+                                <tspan xml:space="preserve" />
+                                <tspan xml:space="preserve">accessibles depuis la position de Thésée</tspan>
+                                <tspan xml:space="preserve" />
+                                <tspan xml:space="preserve">ont été</tspan>
+                                <tspan xml:space="preserve" />
+                                <tspan xml:space="preserve">visitées ?</tspan>
+                            </textPath>
+                        </text>
+                        <text fill="rgb(0, 0, 0)" font-size="12px" font-family="Helvetica, &quot;VP Default&quot;" font-weight="400">
+                            <textPath xlink:href="#1tySK.GDgGH4DgGV">
+                                <tspan xml:space="preserve">Toutes les</tspan>
+                                <tspan xml:space="preserve" />
+                                <tspan xml:space="preserve">cases de la grille</tspan>
+                                <tspan xml:space="preserve" />
+                                <tspan xml:space="preserve">accessibles depuis la position de Thésée</tspan>
+                                <tspan xml:space="preserve" />
+                                <tspan xml:space="preserve">ont été</tspan>
+                                <tspan xml:space="preserve" />
+                                <tspan xml:space="preserve">visitées ?</tspan>
+                            </textPath>
+                        </text>
+                    </svg>
+                </switch>
+            </g>
+        </g>
+        <g shape-node="">
+            <path cell-id="SyX-sqmIP7GoD-vGlTKx-11" d="M 271.47 497.06 L 271.47 190.49" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke" />
+            <path cell-id="SyX-sqmIP7GoD-vGlTKx-11" d="M 271.47 185.24 L 274.97 192.24 L 271.47 190.49 L 267.97 192.24 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all" />
+        </g>
+        <g shape-node="">
+            <g cell-id="SyX-sqmIP7GoD-vGlTKx-13" transform="translate(-0.5 -0.5)">
+                <switch cell-id="SyX-sqmIP7GoD-vGlTKx-13">
+                    <foreignObject cell-id="SyX-sqmIP7GoD-vGlTKx-13" style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 482px; margin-left: 257px;">
+                            <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                                <div style="display: inline-block; font-size: 11px; font-family: &quot;Helvetica&quot;, &quot;VP Default&quot;; color: #000000; line-height: 1.2; pointer-events: all; background-color: #ffffff; white-space: nowrap; ">
+                                    <div ani="">Non</div>
+                                </div>
+                            </div>
+                        </div>
+                    </foreignObject>
+                    <svg width="100%" height="100%">
+                        <defs>
+                            <path id="NtySK.GDgGH4DgGW" d="M247.40625,487.30625 h20.1875" />
+                        </defs>
+                        <text fill="rgb(0, 0, 0)" font-size="11px" font-family="Helvetica, &quot;VP Default&quot;" font-weight="400">
+                            <textPath xlink:href="#NtySK.GDgGH4DgGW" startOffset="50%" text-anchor="middle">
+                                <tspan xml:space="preserve">Non</tspan>
+                            </textPath>
+                        </text>
+                    </svg>
+                </switch>
+            </g>
+        </g>
+        <g shape-node="">
+            <path cell-id="SyX-sqmIP7GoD-vGlTKx-18" d="M 671.47 27.65 L 282 26.04 Q 272 26 271.95 36 L 271.5 117.75" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke" />
+            <path cell-id="SyX-sqmIP7GoD-vGlTKx-18" d="M 271.48 123 L 268.01 115.98 L 271.5 117.75 L 275.01 116.02 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all" />
+        </g>
+        <g shape-node="">
+            <path cell-id="SyX-sqmIP7GoD-vGlTKx-17" d="M 593.82 153.53 L 734 153.97 Q 744 154 743.96 144 L 743.63 60.37" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke" />
+            <path cell-id="SyX-sqmIP7GoD-vGlTKx-17" d="M 743.61 55.12 L 747.14 62.1 L 743.63 60.37 L 740.14 62.13 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all" />
+        </g>
+        <g shape-node="">
+            <g cell-id="ND_a9hylVQ-eyIYOExV3-1" transform="translate(-0.5 -0.5)">
+                <switch cell-id="ND_a9hylVQ-eyIYOExV3-1">
+                    <foreignObject cell-id="ND_a9hylVQ-eyIYOExV3-1" style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 167px; margin-left: 601px;">
+                            <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                                <div style="display: inline-block; font-size: 11px; font-family: &quot;Helvetica&quot;, &quot;VP Default&quot;; color: #000000; line-height: 1.2; pointer-events: all; background-color: #ffffff; white-space: nowrap; ">
+                                    <div ani="">Oui</div>
+                                </div>
+                            </div>
+                        </div>
+                    </foreignObject>
+                    <svg width="100%" height="100%">
+                        <defs>
+                            <path id="ttySK.GDgGH4DgGX" d="M592.9375,172.30625 h17.125" />
+                        </defs>
+                        <text fill="rgb(0, 0, 0)" font-size="11px" font-family="Helvetica, &quot;VP Default&quot;" font-weight="400">
+                            <textPath xlink:href="#ttySK.GDgGH4DgGX" startOffset="50%" text-anchor="middle">
+                                <tspan xml:space="preserve">Oui</tspan>
+                            </textPath>
+                        </text>
+                    </svg>
+                </switch>
+            </g>
+        </g>
+        <g shape-node="">
+            <rect cell-id="SyX-sqmIP7GoD-vGlTKx-16" x="672" y="1" width="143" height="53" rx="3.18" ry="3.18" fill="#ffffff" stroke="#000000" stroke-width="2" pointer-events="all" />
+        </g>
+        <g shape-node="">
+            <g cell-id="SyX-sqmIP7GoD-vGlTKx-16" transform="translate(-0.5 -0.5)">
+                <switch cell-id="SyX-sqmIP7GoD-vGlTKx-16">
+                    <foreignObject cell-id="SyX-sqmIP7GoD-vGlTKx-16" style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 141px; height: 1px; padding-top: 28px; margin-left: 673px;">
+                            <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                                <div style="display: inline-block; font-size: 12px; font-family: &quot;Helvetica&quot;, &quot;VP Default&quot;; color: #000000; line-height: 1.2; pointer-events: all; word-break: break-word; white-space: normal; word-wrap: normal; ">
+                                    <div ani="">Revenir en arrière</div>
+                                </div>
+                            </div>
+                        </div>
+                    </foreignObject>
+                    <svg width="100%" height="100%">
+                        <defs>
+                            <path id="dtySK.GDgGH4DgGY" d="M695.46875,33.4125 h96.046875" />
+                        </defs>
+                        <text fill="rgb(0, 0, 0)" font-size="12px" font-family="Helvetica, &quot;VP Default&quot;" font-weight="400">
+                            <textPath xlink:href="#dtySK.GDgGH4DgGY" startOffset="50%" text-anchor="middle">
+                                <tspan xml:space="preserve">Revenir en arrière</tspan>
+                            </textPath>
+                        </text>
+                    </svg>
+                </switch>
+            </g>
+        </g>
+        <g shape-node="">
+            <path cell-id="SyX-sqmIP7GoD-vGlTKx-14" d="M 519 229 L 519 325.63" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke" />
+            <path cell-id="SyX-sqmIP7GoD-vGlTKx-14" d="M 519 330.88 L 515.5 323.88 L 519 325.63 L 522.5 323.88 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all" />
+        </g>
+        <g shape-node="">
+            <g cell-id="SyX-sqmIP7GoD-vGlTKx-15" transform="translate(-0.5 -0.5)">
+                <switch cell-id="SyX-sqmIP7GoD-vGlTKx-15">
+                    <foreignObject cell-id="SyX-sqmIP7GoD-vGlTKx-15" style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 241px; margin-left: 504px;">
+                            <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                                <div style="display: inline-block; font-size: 11px; font-family: &quot;Helvetica&quot;, &quot;VP Default&quot;; color: #000000; line-height: 1.2; pointer-events: all; background-color: #ffffff; white-space: nowrap; ">
+                                    <div ani="">Non</div>
+                                </div>
+                            </div>
+                        </div>
+                    </foreignObject>
+                    <svg width="100%" height="100%">
+                        <defs>
+                            <path id="9tySK.GDgGH4DgGZ" d="M494.40625,246.30625 h20.1875" />
+                        </defs>
+                        <text fill="rgb(0, 0, 0)" font-size="11px" font-family="Helvetica, &quot;VP Default&quot;" font-weight="400">
+                            <textPath xlink:href="#9tySK.GDgGH4DgGZ" startOffset="50%" text-anchor="middle">
+                                <tspan xml:space="preserve">Non</tspan>
+                            </textPath>
+                        </text>
+                    </svg>
+                </switch>
+            </g>
+        </g>
+        <g shape-node="">
+            <path cell-id="SyX-sqmIP7GoD-vGlTKx-6" d="M 519 79 L 594 154 L 519 229 L 444 154 Z" fill="#ffffff" stroke="#000000" stroke-width="2" stroke-miterlimit="10" pointer-events="all" />
+        </g>
+        <g shape-node="">
+            <g cell-id="SyX-sqmIP7GoD-vGlTKx-6" transform="translate(-0.5 -0.5)">
+                <switch cell-id="SyX-sqmIP7GoD-vGlTKx-6">
+                    <foreignObject cell-id="SyX-sqmIP7GoD-vGlTKx-6" style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 148px; height: 1px; padding-top: 154px; margin-left: 445px;">
+                            <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                                <div style="display: inline-block; font-size: 12px; font-family: &quot;Helvetica&quot;, &quot;VP Default&quot;; color: #000000; line-height: 1.2; pointer-events: all; word-break: break-word; white-space: normal; word-wrap: normal; ">
+                                    <div ani="">Toutes les directions <br />ont été visitées ? </div>
+                                </div>
+                            </div>
+                        </div>
+                    </foreignObject>
+                    <svg width="100%" height="100%">
+                        <defs>
+                            <path id="DtySK.GDgGH4DgGa" d="M464.625,152.209375 h108.734375 M464.625,166.609375 h108.734375" />
+                            <path id="DtySK.GDgGH4DgGb" d="M464.625,152.209375 h108.734375 M464.625,166.609375 h108.734375" />
+                        </defs>
+                        <text fill="rgb(0, 0, 0)" font-size="12px" font-family="Helvetica, &quot;VP Default&quot;" font-weight="400">
+                            <textPath xlink:href="#DtySK.GDgGH4DgGa">
+                                <tspan xml:space="preserve">Toutes les directions</tspan>
+                                <tspan xml:space="preserve" />
+                                <tspan xml:space="preserve">ont été visitées ?</tspan>
+                            </textPath>
+                        </text>
+                        <text fill="rgb(0, 0, 0)" font-size="12px" font-family="Helvetica, &quot;VP Default&quot;" font-weight="400">
+                            <textPath xlink:href="#DtySK.GDgGH4DgGb">
+                                <tspan xml:space="preserve">Toutes les directions</tspan>
+                                <tspan xml:space="preserve" />
+                                <tspan xml:space="preserve">ont été visitées ?</tspan>
+                            </textPath>
+                        </text>
+                    </svg>
+                </switch>
+            </g>
+        </g>
+        <g shape-node="">
+            <rect cell-id="SyX-sqmIP7GoD-vGlTKx-5" x="438" y="332" width="162" height="50" rx="3" ry="3" fill="#ffffff" stroke="#000000" stroke-width="2" pointer-events="all" />
+        </g>
+        <g shape-node="">
+            <g cell-id="SyX-sqmIP7GoD-vGlTKx-5" transform="translate(-0.5 -0.5)">
+                <switch cell-id="SyX-sqmIP7GoD-vGlTKx-5">
+                    <foreignObject cell-id="SyX-sqmIP7GoD-vGlTKx-5" style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 160px; height: 1px; padding-top: 357px; margin-left: 439px;">
+                            <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                                <div style="display: inline-block; font-size: 12px; font-family: &quot;Helvetica&quot;, &quot;VP Default&quot;; color: #000000; line-height: 1.2; pointer-events: all; word-break: break-word; white-space: normal; word-wrap: normal; ">
+                                    <div ani="">Déplacer Thésée dans une des cases non visitée</div>
+                                </div>
+                            </div>
+                        </div>
+                    </foreignObject>
+                    <svg width="100%" height="100%">
+                        <defs>
+                            <path id="jtySK.GDgGH4DgGc" d="M439,355.209375 h160 M439,369.609375 h160" />
+                        </defs>
+                        <text fill="rgb(0, 0, 0)" font-size="12px" font-family="Helvetica, &quot;VP Default&quot;" font-weight="400">
+                            <textPath xlink:href="#jtySK.GDgGH4DgGc">
+                                <tspan xml:space="preserve">Déplacer Thésée dans une des cases non visitée</tspan>
+                            </textPath>
+                        </text>
+                    </svg>
+                </switch>
+            </g>
+        </g>
+        <g shape-node="">
+            <path cell-id="SyX-sqmIP7GoD-vGlTKx-19" d="M 743.5 282 L 818 357 L 743.5 432 L 669 357 Z" fill="#ffffff" stroke="#000000" stroke-width="2" stroke-miterlimit="10" pointer-events="all" />
+        </g>
+        <g shape-node="">
+            <g cell-id="SyX-sqmIP7GoD-vGlTKx-19" transform="translate(-0.5 -0.5)">
+                <switch cell-id="SyX-sqmIP7GoD-vGlTKx-19">
+                    <foreignObject cell-id="SyX-sqmIP7GoD-vGlTKx-19" style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 147px; height: 1px; padding-top: 357px; margin-left: 670px;">
+                            <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                                <div style="display: inline-block; font-size: 12px; font-family: &quot;Helvetica&quot;, &quot;VP Default&quot;; color: #000000; line-height: 1.2; pointer-events: all; word-break: break-word; white-space: normal; word-wrap: normal; ">
+                                    <div ani="">La nouvelle <br />position de Thésée <br />est un mur ? </div>
+                                </div>
+                            </div>
+                        </div>
+                    </foreignObject>
+                    <svg width="100%" height="100%">
+                        <defs>
+                            <path id="TtySK.GDgGH4DgGd" d="M692.90625,348.021875 h101.1875 M692.90625,362.421875 h101.1875 M692.90625,376.821875 h101.1875" />
+                            <path id="TtySK.GDgGH4DgGe" d="M692.90625,348.021875 h101.1875 M692.90625,362.421875 h101.1875 M692.90625,376.821875 h101.1875" />
+                            <path id="ztySK.GDgGH4DgGf" d="M692.90625,348.021875 h101.1875 M692.90625,362.421875 h101.1875 M692.90625,376.821875 h101.1875" />
+                        </defs>
+                        <text fill="rgb(0, 0, 0)" font-size="12px" font-family="Helvetica, &quot;VP Default&quot;" font-weight="400">
+                            <textPath xlink:href="#TtySK.GDgGH4DgGd">
+                                <tspan xml:space="preserve">La nouvelle</tspan>
+                                <tspan xml:space="preserve" />
+                                <tspan xml:space="preserve">position de Thésée</tspan>
+                                <tspan xml:space="preserve" />
+                                <tspan xml:space="preserve">est un mur ?</tspan>
+                            </textPath>
+                        </text>
+                        <text fill="rgb(0, 0, 0)" font-size="12px" font-family="Helvetica, &quot;VP Default&quot;" font-weight="400">
+                            <textPath xlink:href="#TtySK.GDgGH4DgGe">
+                                <tspan xml:space="preserve">La nouvelle</tspan>
+                                <tspan xml:space="preserve" />
+                                <tspan xml:space="preserve">position de Thésée</tspan>
+                                <tspan xml:space="preserve" />
+                                <tspan xml:space="preserve">est un mur ?</tspan>
+                            </textPath>
+                        </text>
+                        <text fill="rgb(0, 0, 0)" font-size="12px" font-family="Helvetica, &quot;VP Default&quot;" font-weight="400">
+                            <textPath xlink:href="#ztySK.GDgGH4DgGf">
+                                <tspan xml:space="preserve">La nouvelle</tspan>
+                                <tspan xml:space="preserve" />
+                                <tspan xml:space="preserve">position de Thésée</tspan>
+                                <tspan xml:space="preserve" />
+                                <tspan xml:space="preserve">est un mur ?</tspan>
+                            </textPath>
+                        </text>
+                    </svg>
+                </switch>
+            </g>
+        </g>
+        <g shape-node="">
+            <path cell-id="SyX-sqmIP7GoD-vGlTKx-20" d="M 600 357 L 662.63 357" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke" />
+            <path cell-id="SyX-sqmIP7GoD-vGlTKx-20" d="M 667.88 357 L 660.88 360.5 L 662.63 357 L 660.88 353.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all" />
+        </g>
+        <g shape-node="">
+            <path cell-id="SyX-sqmIP7GoD-vGlTKx-22" d="M 743.24 281.76 L 743.24 59.9" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke" />
+            <path cell-id="SyX-sqmIP7GoD-vGlTKx-22" d="M 743.24 54.65 L 746.74 61.65 L 743.24 59.9 L 739.74 61.65 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all" />
+        </g>
+        <g shape-node="">
+            <g cell-id="SyX-sqmIP7GoD-vGlTKx-24" transform="translate(-0.5 -0.5)">
+                <switch cell-id="SyX-sqmIP7GoD-vGlTKx-24">
+                    <foreignObject cell-id="SyX-sqmIP7GoD-vGlTKx-24" style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 270px; margin-left: 726px;">
+                            <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                                <div style="display: inline-block; font-size: 11px; font-family: &quot;Helvetica&quot;, &quot;VP Default&quot;; color: #000000; line-height: 1.2; pointer-events: all; background-color: #ffffff; white-space: nowrap; ">
+                                    <div ani="">Oui</div>
+                                </div>
+                            </div>
+                        </div>
+                    </foreignObject>
+                    <svg width="100%" height="100%">
+                        <defs>
+                            <path id="LtySK.GDgGH4DgGg" d="M717.9375,275.30625 h17.125" />
+                        </defs>
+                        <text fill="rgb(0, 0, 0)" font-size="11px" font-family="Helvetica, &quot;VP Default&quot;" font-weight="400">
+                            <textPath xlink:href="#LtySK.GDgGH4DgGg" startOffset="50%" text-anchor="middle">
+                                <tspan xml:space="preserve">Oui</tspan>
+                            </textPath>
+                        </text>
+                    </svg>
+                </switch>
+            </g>
+        </g>
+        <g shape-node="">
+            <path cell-id="SyX-sqmIP7GoD-vGlTKx-23" d="M 743.24 432.35 L 743.24 490.69" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke" />
+            <path cell-id="SyX-sqmIP7GoD-vGlTKx-23" d="M 743.24 495.94 L 739.74 488.94 L 743.24 490.69 L 746.74 488.94 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all" />
+        </g>
+        <g shape-node="">
+            <g cell-id="SyX-sqmIP7GoD-vGlTKx-25" transform="translate(-0.5 -0.5)">
+                <switch cell-id="SyX-sqmIP7GoD-vGlTKx-25">
+                    <foreignObject cell-id="SyX-sqmIP7GoD-vGlTKx-25" style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 443px; margin-left: 725px;">
+                            <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                                <div style="display: inline-block; font-size: 11px; font-family: &quot;Helvetica&quot;, &quot;VP Default&quot;; color: #000000; line-height: 1.2; pointer-events: all; background-color: #ffffff; white-space: nowrap; ">
+                                    <div ani="">Non</div>
+                                </div>
+                            </div>
+                        </div>
+                    </foreignObject>
+                    <svg width="100%" height="100%">
+                        <defs>
+                            <path id="rtySK.GDgGH4DgGh" d="M715.40625,448.30625 h20.1875" />
+                        </defs>
+                        <text fill="rgb(0, 0, 0)" font-size="11px" font-family="Helvetica, &quot;VP Default&quot;" font-weight="400">
+                            <textPath xlink:href="#rtySK.GDgGH4DgGh" startOffset="50%" text-anchor="middle">
+                                <tspan xml:space="preserve">Non</tspan>
+                            </textPath>
+                        </text>
+                    </svg>
+                </switch>
+            </g>
+        </g>
+        <g shape-node="">
+            <path cell-id="ND_a9hylVQ-eyIYOExV3-2" d="M 743.5 497 L 821 572 L 743.5 647 L 666 572 Z" fill="#ffffff" stroke="#000000" stroke-width="2" stroke-miterlimit="10" pointer-events="all" />
+        </g>
+        <g shape-node="">
+            <g cell-id="ND_a9hylVQ-eyIYOExV3-2" transform="translate(-0.5 -0.5)">
+                <switch cell-id="ND_a9hylVQ-eyIYOExV3-2">
+                    <foreignObject cell-id="ND_a9hylVQ-eyIYOExV3-2" style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 153px; height: 1px; padding-top: 572px; margin-left: 667px;">
+                            <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                                <div style="display: inline-block; font-size: 12px; font-family: &quot;Helvetica&quot;, &quot;VP Default&quot;; color: #000000; line-height: 1.2; pointer-events: all; word-break: break-word; white-space: normal; word-wrap: normal; ">
+                                    <div ani="">La nouvelle <br />position de Thésée <br />est la sortie ? </div>
+                                </div>
+                            </div>
+                        </div>
+                    </foreignObject>
+                    <svg width="100%" height="100%">
+                        <defs>
+                            <path id="rtySK.GDgGH4DgGi" d="M692.90625,563.021875 h101.1875 M692.90625,577.421875 h101.1875 M692.90625,591.821875 h101.1875" />
+                            <path id="btySK.GDgGH4DgGj" d="M692.90625,563.021875 h101.1875 M692.90625,577.421875 h101.1875 M692.90625,591.821875 h101.1875" />
+                            <path id="btySK.GDgGH4DgGk" d="M692.90625,563.021875 h101.1875 M692.90625,577.421875 h101.1875 M692.90625,591.821875 h101.1875" />
+                        </defs>
+                        <text fill="rgb(0, 0, 0)" font-size="12px" font-family="Helvetica, &quot;VP Default&quot;" font-weight="400">
+                            <textPath xlink:href="#rtySK.GDgGH4DgGi">
+                                <tspan xml:space="preserve">La nouvelle</tspan>
+                                <tspan xml:space="preserve" />
+                                <tspan xml:space="preserve">position de Thésée</tspan>
+                                <tspan xml:space="preserve" />
+                                <tspan xml:space="preserve">est la sortie ?</tspan>
+                            </textPath>
+                        </text>
+                        <text fill="rgb(0, 0, 0)" font-size="12px" font-family="Helvetica, &quot;VP Default&quot;" font-weight="400">
+                            <textPath xlink:href="#btySK.GDgGH4DgGj">
+                                <tspan xml:space="preserve">La nouvelle</tspan>
+                                <tspan xml:space="preserve" />
+                                <tspan xml:space="preserve">position de Thésée</tspan>
+                                <tspan xml:space="preserve" />
+                                <tspan xml:space="preserve">est la sortie ?</tspan>
+                            </textPath>
+                        </text>
+                        <text fill="rgb(0, 0, 0)" font-size="12px" font-family="Helvetica, &quot;VP Default&quot;" font-weight="400">
+                            <textPath xlink:href="#btySK.GDgGH4DgGk">
+                                <tspan xml:space="preserve">La nouvelle</tspan>
+                                <tspan xml:space="preserve" />
+                                <tspan xml:space="preserve">position de Thésée</tspan>
+                                <tspan xml:space="preserve" />
+                                <tspan xml:space="preserve">est la sortie ?</tspan>
+                            </textPath>
+                        </text>
+                    </svg>
+                </switch>
+            </g>
+        </g>
+        <g shape-node="">
+            <path cell-id="ND_a9hylVQ-eyIYOExV3-3" d="M 743.24 646.47 L 743.9 713 Q 744 723 734 723 L 575.37 723" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke" />
+            <path cell-id="ND_a9hylVQ-eyIYOExV3-3" d="M 570.12 723 L 577.12 719.5 L 575.37 723 L 577.12 726.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all" />
+        </g>
+        <g shape-node="">
+            <g cell-id="ND_a9hylVQ-eyIYOExV3-5" transform="translate(-0.5 -0.5)">
+                <switch cell-id="ND_a9hylVQ-eyIYOExV3-5">
+                    <foreignObject cell-id="ND_a9hylVQ-eyIYOExV3-5" style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 659px; margin-left: 731px;">
+                            <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                                <div style="display: inline-block; font-size: 11px; font-family: &quot;Helvetica&quot;, &quot;VP Default&quot;; color: #000000; line-height: 1.2; pointer-events: all; background-color: #ffffff; white-space: nowrap; ">
+                                    <div ani="">Oui</div>
+                                </div>
+                            </div>
+                        </div>
+                    </foreignObject>
+                    <svg width="100%" height="100%">
+                        <defs>
+                            <path id="7tySK.GDgGH4DgGl" d="M722.9375,664.30625 h17.125" />
+                        </defs>
+                        <text fill="rgb(0, 0, 0)" font-size="11px" font-family="Helvetica, &quot;VP Default&quot;" font-weight="400">
+                            <textPath xlink:href="#7tySK.GDgGH4DgGl" startOffset="50%" text-anchor="middle">
+                                <tspan xml:space="preserve">Oui</tspan>
+                            </textPath>
+                        </text>
+                    </svg>
+                </switch>
+            </g>
+        </g>
+        <g shape-node="">
+            <path cell-id="ND_a9hylVQ-eyIYOExV3-4" d="M 666 572 L 353.37 572" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke" />
+            <path cell-id="ND_a9hylVQ-eyIYOExV3-4" d="M 348.12 572 L 355.12 568.5 L 353.37 572 L 355.12 575.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all" />
+        </g>
+        <g shape-node="">
+            <g cell-id="ND_a9hylVQ-eyIYOExV3-6" transform="translate(-0.5 -0.5)">
+                <switch cell-id="ND_a9hylVQ-eyIYOExV3-6">
+                    <foreignObject cell-id="ND_a9hylVQ-eyIYOExV3-6" style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 563px; margin-left: 652px;">
+                            <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                                <div style="display: inline-block; font-size: 11px; font-family: &quot;Helvetica&quot;, &quot;VP Default&quot;; color: #000000; line-height: 1.2; pointer-events: all; background-color: #ffffff; white-space: nowrap; ">
+                                    <div ani="">Non</div>
+                                </div>
+                            </div>
+                        </div>
+                    </foreignObject>
+                    <svg width="100%" height="100%">
+                        <defs>
+                            <path id="HtySK.GDgGH4DgGm" d="M642.40625,568.30625 h20.1875" />
+                        </defs>
+                        <text fill="rgb(0, 0, 0)" font-size="11px" font-family="Helvetica, &quot;VP Default&quot;" font-weight="400">
+                            <textPath xlink:href="#HtySK.GDgGH4DgGm" startOffset="50%" text-anchor="middle">
+                                <tspan xml:space="preserve">Non</tspan>
+                            </textPath>
+                        </text>
+                    </svg>
+                </switch>
+            </g>
+        </g>
+        <g shape-node="">
+            <path cell-id="SyX-sqmIP7GoD-vGlTKx-4" d="M 100 154 L 184.63 154" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke" />
+            <path cell-id="SyX-sqmIP7GoD-vGlTKx-4" d="M 189.88 154 L 182.88 157.5 L 184.63 154 L 182.88 150.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all" />
+        </g>
+        <g shape-node="">
+            <path cell-id="SyX-sqmIP7GoD-vGlTKx-7" d="M 353 154 L 437.63 154" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke" />
+            <path cell-id="SyX-sqmIP7GoD-vGlTKx-7" d="M 442.88 154 L 435.88 157.5 L 437.63 154 L 435.88 150.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all" />
+        </g>
+        <g shape-node="">
+            <path cell-id="SyX-sqmIP7GoD-vGlTKx-10" d="M 271.47 646.47 L 271.93 713 Q 272 723 282 723 L 462.63 723" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke" />
+            <path cell-id="SyX-sqmIP7GoD-vGlTKx-10" d="M 467.88 723 L 460.88 726.5 L 462.63 723 L 460.88 719.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all" />
+        </g>
+        <g shape-node="">
+            <g cell-id="SyX-sqmIP7GoD-vGlTKx-12" transform="translate(-0.5 -0.5)">
+                <switch cell-id="SyX-sqmIP7GoD-vGlTKx-12">
+                    <foreignObject cell-id="SyX-sqmIP7GoD-vGlTKx-12" style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 658px; margin-left: 259px;">
+                            <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                                <div style="display: inline-block; font-size: 11px; font-family: &quot;Helvetica&quot;, &quot;VP Default&quot;; color: #000000; line-height: 1.2; pointer-events: all; background-color: #ffffff; white-space: nowrap; ">
+                                    <div ani="">Oui</div>
+                                </div>
+                            </div>
+                        </div>
+                    </foreignObject>
+                    <svg width="100%" height="100%">
+                        <defs>
+                            <path id="ntySK.GDgGH4DgGn" d="M250.9375,663.30625 h17.125" />
+                        </defs>
+                        <text fill="rgb(0, 0, 0)" font-size="11px" font-family="Helvetica, &quot;VP Default&quot;" font-weight="400">
+                            <textPath xlink:href="#ntySK.GDgGH4DgGn" startOffset="50%" text-anchor="middle">
+                                <tspan xml:space="preserve">Oui</tspan>
+                            </textPath>
+                        </text>
+                    </svg>
+                </switch>
+            </g>
+        </g>
+        <g shape-node="">
+            <path cell-id="SyX-sqmIP7GoD-vGlTKx-11" d="M 271.47 497.06 L 271.47 190.49" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke" />
+            <path cell-id="SyX-sqmIP7GoD-vGlTKx-11" d="M 271.47 185.24 L 274.97 192.24 L 271.47 190.49 L 267.97 192.24 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all" />
+        </g>
+        <g shape-node="">
+            <g cell-id="SyX-sqmIP7GoD-vGlTKx-13" transform="translate(-0.5 -0.5)">
+                <switch cell-id="SyX-sqmIP7GoD-vGlTKx-13">
+                    <foreignObject cell-id="SyX-sqmIP7GoD-vGlTKx-13" style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 482px; margin-left: 257px;">
+                            <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                                <div style="display: inline-block; font-size: 11px; font-family: &quot;Helvetica&quot;, &quot;VP Default&quot;; color: #000000; line-height: 1.2; pointer-events: all; background-color: #ffffff; white-space: nowrap; ">
+                                    <div ani="">Non</div>
+                                </div>
+                            </div>
+                        </div>
+                    </foreignObject>
+                    <svg width="100%" height="100%">
+                        <defs>
+                            <path id="XtySK.GDgGH4DgGo" d="M247.40625,487.30625 h20.1875" />
+                        </defs>
+                        <text fill="rgb(0, 0, 0)" font-size="11px" font-family="Helvetica, &quot;VP Default&quot;" font-weight="400">
+                            <textPath xlink:href="#XtySK.GDgGH4DgGo" startOffset="50%" text-anchor="middle">
+                                <tspan xml:space="preserve">Non</tspan>
+                            </textPath>
+                        </text>
+                    </svg>
+                </switch>
+            </g>
+        </g>
+        <g shape-node="">
+            <path cell-id="SyX-sqmIP7GoD-vGlTKx-18" d="M 671.47 27.65 L 282 26.04 Q 272 26 271.95 36 L 271.5 117.75" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke" />
+            <path cell-id="SyX-sqmIP7GoD-vGlTKx-18" d="M 271.48 123 L 268.01 115.98 L 271.5 117.75 L 275.01 116.02 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all" />
+        </g>
+        <g shape-node="">
+            <path cell-id="SyX-sqmIP7GoD-vGlTKx-17" d="M 593.82 153.53 L 734 153.97 Q 744 154 743.96 144 L 743.63 60.37" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke" />
+            <path cell-id="SyX-sqmIP7GoD-vGlTKx-17" d="M 743.61 55.12 L 747.14 62.1 L 743.63 60.37 L 740.14 62.13 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all" />
+        </g>
+        <g shape-node="">
+            <g cell-id="ND_a9hylVQ-eyIYOExV3-1" transform="translate(-0.5 -0.5)">
+                <switch cell-id="ND_a9hylVQ-eyIYOExV3-1">
+                    <foreignObject cell-id="ND_a9hylVQ-eyIYOExV3-1" style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 167px; margin-left: 601px;">
+                            <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                                <div style="display: inline-block; font-size: 11px; font-family: &quot;Helvetica&quot;, &quot;VP Default&quot;; color: #000000; line-height: 1.2; pointer-events: all; background-color: #ffffff; white-space: nowrap; ">
+                                    <div ani="">Oui</div>
+                                </div>
+                            </div>
+                        </div>
+                    </foreignObject>
+                    <svg width="100%" height="100%">
+                        <defs>
+                            <path id="3tySK.GDgGH4DgGp" d="M592.9375,172.30625 h17.125" />
+                        </defs>
+                        <text fill="rgb(0, 0, 0)" font-size="11px" font-family="Helvetica, &quot;VP Default&quot;" font-weight="400">
+                            <textPath xlink:href="#3tySK.GDgGH4DgGp" startOffset="50%" text-anchor="middle">
+                                <tspan xml:space="preserve">Oui</tspan>
+                            </textPath>
+                        </text>
+                    </svg>
+                </switch>
+            </g>
+        </g>
+        <g shape-node="">
+            <path cell-id="SyX-sqmIP7GoD-vGlTKx-14" d="M 519 229 L 519 325.63" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke" />
+            <path cell-id="SyX-sqmIP7GoD-vGlTKx-14" d="M 519 330.88 L 515.5 323.88 L 519 325.63 L 522.5 323.88 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all" />
+        </g>
+        <g shape-node="">
+            <g cell-id="SyX-sqmIP7GoD-vGlTKx-15" transform="translate(-0.5 -0.5)">
+                <switch cell-id="SyX-sqmIP7GoD-vGlTKx-15">
+                    <foreignObject cell-id="SyX-sqmIP7GoD-vGlTKx-15" style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 241px; margin-left: 504px;">
+                            <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                                <div style="display: inline-block; font-size: 11px; font-family: &quot;Helvetica&quot;, &quot;VP Default&quot;; color: #000000; line-height: 1.2; pointer-events: all; background-color: #ffffff; white-space: nowrap; ">
+                                    <div ani="">Non</div>
+                                </div>
+                            </div>
+                        </div>
+                    </foreignObject>
+                    <svg width="100%" height="100%">
+                        <defs>
+                            <path id="PtySK.GDgGH4DgGq" d="M494.40625,246.30625 h20.1875" />
+                        </defs>
+                        <text fill="rgb(0, 0, 0)" font-size="11px" font-family="Helvetica, &quot;VP Default&quot;" font-weight="400">
+                            <textPath xlink:href="#PtySK.GDgGH4DgGq" startOffset="50%" text-anchor="middle">
+                                <tspan xml:space="preserve">Non</tspan>
+                            </textPath>
+                        </text>
+                    </svg>
+                </switch>
+            </g>
+        </g>
+        <g shape-node="">
+            <path cell-id="SyX-sqmIP7GoD-vGlTKx-20" d="M 600 357 L 662.63 357" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke" />
+            <path cell-id="SyX-sqmIP7GoD-vGlTKx-20" d="M 667.88 357 L 660.88 360.5 L 662.63 357 L 660.88 353.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all" />
+        </g>
+        <g shape-node="">
+            <path cell-id="SyX-sqmIP7GoD-vGlTKx-22" d="M 743.24 281.76 L 743.24 59.9" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke" />
+            <path cell-id="SyX-sqmIP7GoD-vGlTKx-22" d="M 743.24 54.65 L 746.74 61.65 L 743.24 59.9 L 739.74 61.65 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all" />
+        </g>
+        <g shape-node="">
+            <g cell-id="SyX-sqmIP7GoD-vGlTKx-24" transform="translate(-0.5 -0.5)">
+                <switch cell-id="SyX-sqmIP7GoD-vGlTKx-24">
+                    <foreignObject cell-id="SyX-sqmIP7GoD-vGlTKx-24" style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 270px; margin-left: 726px;">
+                            <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                                <div style="display: inline-block; font-size: 11px; font-family: &quot;Helvetica&quot;, &quot;VP Default&quot;; color: #000000; line-height: 1.2; pointer-events: all; background-color: #ffffff; white-space: nowrap; ">
+                                    <div ani="">Oui</div>
+                                </div>
+                            </div>
+                        </div>
+                    </foreignObject>
+                    <svg width="100%" height="100%">
+                        <defs>
+                            <path id="vtySK.GDgGH4DgGr" d="M717.9375,275.30625 h17.125" />
+                        </defs>
+                        <text fill="rgb(0, 0, 0)" font-size="11px" font-family="Helvetica, &quot;VP Default&quot;" font-weight="400">
+                            <textPath xlink:href="#vtySK.GDgGH4DgGr" startOffset="50%" text-anchor="middle">
+                                <tspan xml:space="preserve">Oui</tspan>
+                            </textPath>
+                        </text>
+                    </svg>
+                </switch>
+            </g>
+        </g>
+        <g shape-node="">
+            <path cell-id="SyX-sqmIP7GoD-vGlTKx-23" d="M 743.24 432.35 L 743.24 490.69" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke" />
+            <path cell-id="SyX-sqmIP7GoD-vGlTKx-23" d="M 743.24 495.94 L 739.74 488.94 L 743.24 490.69 L 746.74 488.94 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all" />
+        </g>
+        <g shape-node="">
+            <g cell-id="SyX-sqmIP7GoD-vGlTKx-25" transform="translate(-0.5 -0.5)">
+                <switch cell-id="SyX-sqmIP7GoD-vGlTKx-25">
+                    <foreignObject cell-id="SyX-sqmIP7GoD-vGlTKx-25" style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 443px; margin-left: 725px;">
+                            <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                                <div style="display: inline-block; font-size: 11px; font-family: &quot;Helvetica&quot;, &quot;VP Default&quot;; color: #000000; line-height: 1.2; pointer-events: all; background-color: #ffffff; white-space: nowrap; ">
+                                    <div ani="">Non</div>
+                                </div>
+                            </div>
+                        </div>
+                    </foreignObject>
+                    <svg width="100%" height="100%">
+                        <defs>
+                            <path id="ftySK.GDgGH4DgGs" d="M715.40625,448.30625 h20.1875" />
+                        </defs>
+                        <text fill="rgb(0, 0, 0)" font-size="11px" font-family="Helvetica, &quot;VP Default&quot;" font-weight="400">
+                            <textPath xlink:href="#ftySK.GDgGH4DgGs" startOffset="50%" text-anchor="middle">
+                                <tspan xml:space="preserve">Non</tspan>
+                            </textPath>
+                        </text>
+                    </svg>
+                </switch>
+            </g>
+        </g>
+        <g shape-node="">
+            <path cell-id="ND_a9hylVQ-eyIYOExV3-3" d="M 743.24 646.47 L 743.9 713 Q 744 723 734 723 L 575.37 723" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke" />
+            <path cell-id="ND_a9hylVQ-eyIYOExV3-3" d="M 570.12 723 L 577.12 719.5 L 575.37 723 L 577.12 726.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all" />
+        </g>
+        <g shape-node="">
+            <g cell-id="ND_a9hylVQ-eyIYOExV3-5" transform="translate(-0.5 -0.5)">
+                <switch cell-id="ND_a9hylVQ-eyIYOExV3-5">
+                    <foreignObject cell-id="ND_a9hylVQ-eyIYOExV3-5" style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 659px; margin-left: 731px;">
+                            <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                                <div style="display: inline-block; font-size: 11px; font-family: &quot;Helvetica&quot;, &quot;VP Default&quot;; color: #000000; line-height: 1.2; pointer-events: all; background-color: #ffffff; white-space: nowrap; ">
+                                    <div ani="">Oui</div>
+                                </div>
+                            </div>
+                        </div>
+                    </foreignObject>
+                    <svg width="100%" height="100%">
+                        <defs>
+                            <path id="_tySK.GDgGH4DgGt" d="M722.9375,664.30625 h17.125" />
+                        </defs>
+                        <text fill="rgb(0, 0, 0)" font-size="11px" font-family="Helvetica, &quot;VP Default&quot;" font-weight="400">
+                            <textPath xlink:href="#_tySK.GDgGH4DgGt" startOffset="50%" text-anchor="middle">
+                                <tspan xml:space="preserve">Oui</tspan>
+                            </textPath>
+                        </text>
+                    </svg>
+                </switch>
+            </g>
+        </g>
+        <g shape-node="">
+            <path cell-id="ND_a9hylVQ-eyIYOExV3-4" d="M 666 572 L 353.37 572" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke" />
+            <path cell-id="ND_a9hylVQ-eyIYOExV3-4" d="M 348.12 572 L 355.12 568.5 L 353.37 572 L 355.12 575.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all" />
+        </g>
+        <g shape-node="">
+            <g cell-id="ND_a9hylVQ-eyIYOExV3-6" transform="translate(-0.5 -0.5)">
+                <switch cell-id="ND_a9hylVQ-eyIYOExV3-6">
+                    <foreignObject cell-id="ND_a9hylVQ-eyIYOExV3-6" style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 563px; margin-left: 652px;">
+                            <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                                <div style="display: inline-block; font-size: 11px; font-family: &quot;Helvetica&quot;, &quot;VP Default&quot;; color: #000000; line-height: 1.2; pointer-events: all; background-color: #ffffff; white-space: nowrap; ">
+                                    <div ani="">Non</div>
+                                </div>
+                            </div>
+                        </div>
+                    </foreignObject>
+                    <svg width="100%" height="100%">
+                        <defs>
+                            <path id="_tySK.GDgGH4DgGu" d="M642.40625,568.30625 h20.1875" />
+                        </defs>
+                        <text fill="rgb(0, 0, 0)" font-size="11px" font-family="Helvetica, &quot;VP Default&quot;" font-weight="400">
+                            <textPath xlink:href="#_tySK.GDgGH4DgGu" startOffset="50%" text-anchor="middle">
+                                <tspan xml:space="preserve">Non</tspan>
+                            </textPath>
+                        </text>
+                    </svg>
+                </switch>
+            </g>
+        </g>
+    </g>
+</svg>
